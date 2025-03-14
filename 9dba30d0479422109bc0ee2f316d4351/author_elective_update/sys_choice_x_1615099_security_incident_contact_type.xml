@@ -6,7 +6,6 @@
             <sys_class_name>sys_choice_set</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2025-03-11 10:21:05</sys_created_on>
-            <sys_id>c4563d10471c22109bc0ee2f316d439d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>contact_type</sys_name>
             <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
@@ -30,7 +29,6 @@
             <sys_created_on>2025-03-11 10:21:05</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>80563d10471c22109bc0ee2f316d439d</sys_id>
             <sys_mod_count>8</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2025-03-11 17:34:07</sys_updated_on>
@@ -50,7 +48,6 @@
             <sys_created_on>2025-03-11 10:22:37</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>c596bd50471c22109bc0ee2f316d431d</sys_id>
             <sys_mod_count>7</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2025-03-11 17:34:17</sys_updated_on>
@@ -70,7 +67,6 @@
             <sys_created_on>2025-03-11 10:22:59</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>a2a6f910471c22109bc0ee2f316d43cd</sys_id>
             <sys_mod_count>8</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2025-03-11 17:34:13</sys_updated_on>

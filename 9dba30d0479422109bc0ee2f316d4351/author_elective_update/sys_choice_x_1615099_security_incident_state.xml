@@ -6,7 +6,6 @@
             <sys_class_name>sys_choice_set</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2025-03-11 13:14:15</sys_created_on>
-            <sys_id>b8fdda9447dc22109bc0ee2f316d431c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>state</sys_name>
             <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
@@ -30,7 +29,6 @@
             <sys_created_on>2025-03-11 13:14:15</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>72ed1e5447dc22109bc0ee2f316d4374</sys_id>
             <sys_mod_count>5</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2025-03-11 17:33:47</sys_updated_on>
@@ -50,7 +48,6 @@
             <sys_created_on>2025-03-11 13:14:28</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>b4fdd25447dc22109bc0ee2f316d431f</sys_id>
             <sys_mod_count>5</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2025-03-11 17:33:57</sys_updated_on>
@@ -70,7 +67,6 @@
             <sys_created_on>2025-03-11 13:14:49</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>33fd5e5447dc22109bc0ee2f316d43e2</sys_id>
             <sys_mod_count>5</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2025-03-11 17:33:37</sys_updated_on>
@@ -90,7 +86,6 @@
             <sys_created_on>2025-03-11 13:15:01</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>741e5e9447dc22109bc0ee2f316d4300</sys_id>
             <sys_mod_count>5</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2025-03-11 17:33:53</sys_updated_on>
@@ -110,7 +105,6 @@
             <sys_created_on>2025-03-11 13:15:14</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>442e569447dc22109bc0ee2f316d43ce</sys_id>
             <sys_mod_count>5</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2025-03-11 17:33:42</sys_updated_on>

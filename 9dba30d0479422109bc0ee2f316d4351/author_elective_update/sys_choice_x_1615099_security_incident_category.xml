@@ -1,100 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_choice action="INSERT_OR_UPDATE" field="priority" table="x_1615099_security_incident" version="3">
+    <sys_choice action="INSERT_OR_UPDATE" field="category" table="x_1615099_security_incident" version="3">
         <sys_choice_set action="INSERT_OR_UPDATE">
-            <element>priority</element>
+            <element>category</element>
             <name>x_1615099_security_incident</name>
             <sys_class_name>sys_choice_set</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-03-11 13:09:41</sys_created_on>
-            <sys_id>7dec925447dc22109bc0ee2f316d437a</sys_id>
+            <sys_created_on>2025-03-11 10:36:16</sys_created_on>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>priority</sys_name>
+            <sys_name>category</sys_name>
             <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
             <sys_policy/>
             <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
-            <sys_update_name>sys_choice_x_1615099_security_incident_priority</sys_update_name>
+            <sys_update_name>sys_choice_x_1615099_security_incident_category</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-03-11 13:09:41</sys_updated_on>
+            <sys_updated_on>2025-03-11 10:36:16</sys_updated_on>
         </sys_choice_set>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
-            <element>priority</element>
+            <element>category</element>
             <hint/>
             <inactive>false</inactive>
-            <label>1 - Critical</label>
+            <label>Phishing email</label>
             <language>en</language>
             <name>x_1615099_security_incident</name>
             <sequence>100</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-03-11 13:09:41</sys_created_on>
+            <sys_created_on>2025-03-11 10:36:16</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>75dc1e1447dc22109bc0ee2f316d4381</sys_id>
-            <sys_mod_count>7</sys_mod_count>
+            <sys_mod_count>4</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-03-13 09:58:33</sys_updated_on>
-            <value>1</value>
+            <sys_updated_on>2025-03-11 17:34:38</sys_updated_on>
+            <value>Phishing email</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
-            <element>priority</element>
+            <element>category</element>
             <hint/>
             <inactive>false</inactive>
-            <label>2 - High</label>
+            <label>Malicious code activity</label>
             <language>en</language>
             <name>x_1615099_security_incident</name>
             <sequence>200</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-03-11 13:09:59</sys_created_on>
+            <sys_created_on>2025-03-11 10:36:16</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>e1ec1e1447dc22109bc0ee2f316d4382</sys_id>
-            <sys_mod_count>7</sys_mod_count>
+            <sys_mod_count>4</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-03-13 09:58:44</sys_updated_on>
-            <value>2</value>
+            <sys_updated_on>2025-03-11 17:34:27</sys_updated_on>
+            <value>Malicious code activity</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
-            <element>priority</element>
+            <element>category</element>
             <hint/>
             <inactive>false</inactive>
-            <label>3 - Medium</label>
+            <label>Equipment loss</label>
             <language>en</language>
             <name>x_1615099_security_incident</name>
             <sequence>300</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-03-11 13:10:15</sys_created_on>
+            <sys_created_on>2025-03-11 10:36:16</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>4efc9e1447dc22109bc0ee2f316d4339</sys_id>
-            <sys_mod_count>7</sys_mod_count>
+            <sys_mod_count>4</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-03-13 09:58:29</sys_updated_on>
-            <value>3</value>
+            <sys_updated_on>2025-03-11 17:34:43</sys_updated_on>
+            <value>Equipment loss</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
-            <element>priority</element>
+            <element>category</element>
             <hint/>
             <inactive>false</inactive>
-            <label>4 - Low</label>
+            <label>Malware</label>
             <language>en</language>
             <name>x_1615099_security_incident</name>
             <sequence>400</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-03-11 13:10:27</sys_created_on>
+            <sys_created_on>2025-03-11 13:05:51</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>c20d121447dc22109bc0ee2f316d43de</sys_id>
-            <sys_mod_count>7</sys_mod_count>
+            <sys_mod_count>5</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-03-13 09:58:38</sys_updated_on>
-            <value>4</value>
+            <sys_updated_on>2025-03-11 17:34:33</sys_updated_on>
+            <value>Malware</value>
         </sys_choice>
     </sys_choice>
 </record_update>

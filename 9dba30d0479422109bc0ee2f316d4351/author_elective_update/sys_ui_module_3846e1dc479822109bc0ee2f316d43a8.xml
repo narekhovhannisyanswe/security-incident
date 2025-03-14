@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="DELETE">
+        <active>true</active>
+        <application display_value="Security Incident (Narek Hovhannisyan)">b046e1dc479822109bc0ee2f316d43a5</application>
+        <filter/>
+        <name>Security Incidents</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_1615099_security.security_incident_user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-11 09:10:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3846e1dc479822109bc0ee2f316d43a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Security Incidents</sys_name>
+        <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name>sys_ui_module_3846e1dc479822109bc0ee2f316d43a8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-11 09:10:57</sys_updated_on>
+        <table>x_1615099_security_incident</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</application>
+        <file_path/>
+        <instance_id>726b66ceeb73de108326ff72dad0cdbd</instance_id>
+        <instance_name>dev297503</instance_name>
+        <name>sys_ui_module_3846e1dc479822109bc0ee2f316d43a8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module"><sys_ui_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Security Incident (Narek Hovhannisyan)">b046e1dc479822109bc0ee2f316d43a5</application><filter/><name>Security Incidents</name><order/><path/><path_relative_to_root>false</path_relative_to_root><roles>x_1615099_security.security_incident_user</roles><sys_class_name>sys_ui_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-03-11 09:10:57</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>3846e1dc479822109bc0ee2f316d43a8</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Security Incidents</sys_name><sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package><sys_policy/><sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope><sys_update_name>sys_ui_module_3846e1dc479822109bc0ee2f316d43a8</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-03-11 09:10:57</sys_updated_on><table>x_1615099_security_incident</table><uncancelable>false</uncancelable><view_name/></sys_ui_module></record_update>]]></payload>
+        <payload_hash>1061479991</payload_hash>
+        <record_name>Security Incidents</record_name>
+        <reverted_from/>
+        <source>15ba38d447d422109bc0ee2f316d433b</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-11 09:10:57</sys_created_on>
+        <sys_id>bc46e1dc479822109bc0ee2f316d43ab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1958478b4c80000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-11 09:10:57</sys_updated_on>
+        <type>Module</type>
+        <update_guid>7046e1dc68982210f3f3c97211d4bdab</update_guid>
+        <update_guid_history>7046e1dc68982210f3f3c97211d4bdab:1061479991</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-12 10:57:58</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_module">sys_ui_module</sys_db_object>
+        <sys_id>12b450fe95c34438aaa4374f4143d464</sys_id>
+        <sys_metadata>3846e1dc479822109bc0ee2f316d43a8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Security Incidents</sys_name>
+        <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_scope_delete display_value="">cae89211d8af4056bbba0a32dbf2b8c4</sys_scope_delete>
+        <sys_update_name>sys_ui_module_3846e1dc479822109bc0ee2f316d43a8</sys_update_name>
+        <sys_update_version display_value="sys_ui_module_3846e1dc479822109bc0ee2f316d43a8">bc46e1dc479822109bc0ee2f316d43ab</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-12 10:57:58</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="58b26598479822109bc0ee2f316d4379" label="Security Incident" max_length="40" name="x_1615099_security_incident" type="collection">
+        <element choice="1" label="Priority" max_length="40" name="priority" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="3 - Medium" sequence="300" value="3"/>
+                <element inactive_on_update="false" label="1 - Critical" sequence="100" value="1"/>
+                <element inactive_on_update="false" label="4 - Low" sequence="400" value="4"/>
+                <element inactive_on_update="false" label="2 - High" sequence="200" value="2"/>
+            </choice>
+        </element>
+        <element choice="1" dependent="category" dependent_on_field="category" label="Subcategory" max_length="40" name="subcategory" type="choice" use_dependent_field="true">
+            <choice>
+                <element dependent_value="Malicious code activity" inactive_on_update="false" label="Keylogger" sequence="1" value="Keylogger"/>
+                <element dependent_value="Malware" inactive_on_update="false" label="Ransomware" sequence="0" value="Ransomware"/>
+                <element dependent_value="Phishing email" inactive_on_update="false" label="Spear phishing" sequence="1" value="Spear phishing"/>
+                <element dependent_value="Equipment loss" inactive_on_update="false" label="Stolen equipment" sequence="1" value="Stolen equipment"/>
+                <element dependent_value="Malware" inactive_on_update="false" label="C&amp;C communication inbound" sequence="1" value="C&amp;C communication inbound"/>
+                <element dependent_value="Malicious code activity" inactive_on_update="false" label="Trojan" sequence="2" value="Trojan"/>
+                <element dependent_value="Malware" inactive_on_update="false" label="C&amp;C communication outbound" sequence="2" value="C&amp;C communication outbound"/>
+                <element dependent_value="Phishing email" inactive_on_update="false" label="Scam e-mail activity" sequence="0" value="Scam e-mail activity"/>
+                <element dependent_value="Equipment loss" inactive_on_update="false" label="Lost equipment" sequence="0" value="Lost equipment"/>
+                <element dependent_value="Malicious code activity" inactive_on_update="false" label="Botnet" sequence="1" value="Botnet"/>
+            </choice>
+        </element>
+        <element label="Description" max_length="4000" name="description" type="string"/>
+        <element label="Caller" max_length="32" name="caller" reference="sys_user" type="reference"/>
+        <element label="Short_description" max_length="160" name="short_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Category" max_length="40" name="category" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Malicious code activity" sequence="200" value="Malicious code activity"/>
+                <element inactive_on_update="false" label="Malware" sequence="400" value="Malware"/>
+                <element inactive_on_update="false" label="Phishing email" sequence="100" value="Phishing email"/>
+                <element inactive_on_update="false" label="Equipment loss" sequence="300" value="Equipment loss"/>
+            </choice>
+        </element>
+        <element label="Affected user" max_length="32" name="affected_user" reference="sys_user" type="reference"/>
+        <element label="Parent" max_length="32" name="parent" reference="x_1615099_security_incident" type="reference"/>
+        <element dependent="assignment_group" dependent_on_field="assignment_group" label="Assigned to" max_length="32" name="assigned_to" reference="sys_user" type="reference" use_dependent_field="true"/>
+        <element choice="1" label="Contact_type" max_length="40" name="contact_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Monitoring" sequence="100" value="Monitoring"/>
+                <element inactive_on_update="false" label="Self-registered" sequence="300" value="Self-registered"/>
+                <element inactive_on_update="false" label="Email" sequence="200" value="Email"/>
+            </choice>
+        </element>
+        <element label="Configuration Item" max_length="32" name="configuration_item" reference="cmdb_ci" type="reference"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Work_notes" max_length="4000" name="work_notes" type="journal"/>
+        <element label="Assignment group" max_length="32" name="assignment_group" reference="sys_user_group" type="reference" use_dependent_field="true"/>
+        <element choice="1" label="State" max_length="40" name="state" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Recover" sequence="300" value="Recover"/>
+                <element inactive_on_update="false" label="Closed" sequence="500" value="Closed"/>
+                <element inactive_on_update="false" label="New" sequence="100" value="New"/>
+                <element inactive_on_update="false" label="Review" sequence="400" value="Review"/>
+                <element inactive_on_update="false" label="Analysis" sequence="200" value="Analysis"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="affected_user"/>
+        </index>
+        <index name="index2">
+            <element name="assigned_to"/>
+        </index>
+        <index name="index3">
+            <element name="assignment_group"/>
+        </index>
+        <index name="index4">
+            <element name="caller"/>
+        </index>
+        <index name="index5">
+            <element name="configuration_item"/>
+        </index>
+        <index name="index6">
+            <element name="parent"/>
+        </index>
+    </element>
+</database>
