@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="contact_type" table="x_1615099_security_incident" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>contact_type</element>
+            <name>x_1615099_security_incident</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-11 10:21:05</sys_created_on>
+            <sys_id>c4563d10471c22109bc0ee2f316d439d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>contact_type</sys_name>
+            <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+            <sys_update_name>sys_choice_x_1615099_security_incident_contact_type</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-11 10:21:05</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>contact_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Monitoring</label>
+            <language>en</language>
+            <name>x_1615099_security_incident</name>
+            <sequence>100</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-11 10:21:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>80563d10471c22109bc0ee2f316d439d</sys_id>
+            <sys_mod_count>8</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-11 17:34:07</sys_updated_on>
+            <value>Monitoring</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>contact_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Email</label>
+            <language>en</language>
+            <name>x_1615099_security_incident</name>
+            <sequence>200</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-11 10:22:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c596bd50471c22109bc0ee2f316d431d</sys_id>
+            <sys_mod_count>7</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-11 17:34:17</sys_updated_on>
+            <value>Email</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>contact_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Self-registered</label>
+            <language>en</language>
+            <name>x_1615099_security_incident</name>
+            <sequence>300</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-11 10:22:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a2a6f910471c22109bc0ee2f316d43cd</sys_id>
+            <sys_mod_count>8</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-11 17:34:13</sys_updated_on>
+            <value>Self-registered</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

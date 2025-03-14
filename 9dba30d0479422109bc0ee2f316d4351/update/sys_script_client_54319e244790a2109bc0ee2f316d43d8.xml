@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>This script runs whenever the 'assignment_group' field changes. It uses GlideAjax to call the 'isUserInGroup' method of 'SIClientUtils' script include, passing the selected user and group. If the user is not in the group,  the 'assigned_to' field is cleared.</description>
+        <field>assignment_group</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Validate Assigned To on Group Change</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+   var assignedToSysId = g_form.getValue('assigned_to');
+   // If no user is assigned, we don't do anything.
+   if (!assignedToSysId) {
+	return;
+   }
+
+   var gaClientUtils = new GlideAjax('SIClientUtils');
+   gaClientUtils.addParam('sysparm_name', 'isUserInGroup');
+   gaClientUtils.addParam('sysparm_user', assignedToSysId);
+   gaClientUtils.addParam('sysparm_group', newValue);
+
+   gaClientUtils.getXMLAnswer(function(answer) {
+	if (answer === 'false') {
+		g_form.clearValue('assigned_to');
+		// g_form.setValue('assigned_to', '');
+	}
+   });
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-12 07:08:22</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>54319e244790a2109bc0ee2f316d43d8</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Validate Assigned To on Group Change</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name>sys_script_client_54319e244790a2109bc0ee2f316d43d8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-12 08:34:11</sys_updated_on>
+        <table>x_1615099_security_incident</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

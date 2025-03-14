@@ -1,0 +1,2214 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=8062000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>ServiceNow should create a Security Incident record when receive an email and email subject starts with "Security Incident:"</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>inbound_email_integration</internal_name>
+        <label_cache>[{"name":"Inbound Email_1.inbound_email.body","label":"Trigger - Inbound Email➛Email Record➛Body","reference":"","reference_display":"Body","type":"string_full_utf8","base_type":"string_full_utf8","parent_table_name":"sys_email","column_name":"body","usedInstances":{"f91fef1c-4bfe-4f37-a9dd-9211ca56dfd8":["description"]}},{"name":"Inbound Email_1.subject","label":"Trigger - Inbound Email➛Subject","type":"string_full_utf8","base_type":"string_full_utf8","usedInstances":{"f91fef1c-4bfe-4f37-a9dd-9211ca56dfd8":["short_description"],"acf0b40d-bdd9-4c02-b701-96f51e859999":["short_description"]},"attributes":{"test_input_hidden":"true"}},{"name":"Inbound Email_1.body_text","label":"Trigger - Inbound Email➛Body Text","type":"string_full_utf8","base_type":"string_full_utf8","usedInstances":{"f91fef1c-4bfe-4f37-a9dd-9211ca56dfd8":["description"]},"attributes":{"test_input_hidden":"true"}},{"name":"Inbound Email_1.from_address","label":"Trigger - Inbound Email➛From address","type":"string_full_utf8","base_type":"string_full_utf8","usedInstances":{"e2a2e258-f0db-4126-bf91-de9a755a5d43":["conditions"]},"attributes":{"test_input_hidden":"true"}},{"name":"e2a2e258-f0db-4126-bf91-de9a755a5d43.Record","label":"3 - Look Up Record➛User Record","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"f91fef1c-4bfe-4f37-a9dd-9211ca56dfd8":["caller"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Inbound Email_1.inbound_email.body_text","label":"Trigger - Inbound Email➛Email Record➛Body text","reference":"","reference_display":"Body text","type":"string_full_utf8","base_type":"string_full_utf8","parent_table_name":"sys_email","column_name":"body_text","usedInstances":{"acf0b40d-bdd9-4c02-b701-96f51e859999":["description"],"f91fef1c-4bfe-4f37-a9dd-9211ca56dfd8":["description"]}}]</label_cache>
+        <master_snapshot>88d8481947d066109bc0ee2f316d432a</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Inbound Email Integration</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>d4d8481947d066109bc0ee2f316d43bb</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 03:28:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f0b4bf8d475066109bc0ee2f316d433c</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>Inbound Email Integration</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name>sys_hub_flow_f0b4bf8d475066109bc0ee2f316d433c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:43:09</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=f0b4bf8d475066109bc0ee2f316d433c"/>
+    <sys_variable_value action="delete_multiple" query="document_key=f0b4bf8d475066109bc0ee2f316d433c"/>
+    <sys_flow_email_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <email_conditions table="sys_email">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </email_conditions>
+        <event_name>email.read</event_name>
+        <name/>
+        <order/>
+        <published_version/>
+        <stop_condition_evaluation>true</stop_condition_evaluation>
+        <sys_class_name>sys_flow_email_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d4d8481947d066109bc0ee2f316d43bb</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:43:09</sys_updated_on>
+        <target_table/>
+        <trigger_definition/>
+    </sys_flow_email_trigger>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=f0b4bf8d475066109bc0ee2f316d433c"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=f0b4bf8d475066109bc0ee2f316d433c"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=f0b4bf8d475066109bc0ee2f316d433c^sys_idNOT IN34b4b7cd475066109bc0ee2f316d4375"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>f0b4bf8d475066109bc0ee2f316d433c</id>
+        <name>Inbound Email Integration</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 03:28:44</sys_created_on>
+        <sys_id>34b4b7cd475066109bc0ee2f316d4375</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 03:28:44</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=34b4b7cd475066109bc0ee2f316d4375"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=f0b4bf8d475066109bc0ee2f316d433c^sys_idNOT IN16c8c41947d066109bc0ee2f316d43fe,1ac8081947d066109bc0ee2f316d4304,1ec8c41947d066109bc0ee2f316d43f6,6ec8081947d066109bc0ee2f316d4307,96c8081947d066109bc0ee2f316d4301,eec8081947d066109bc0ee2f316d430a,eec8081947d066109bc0ee2f316d4326"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8,uiTypeLabel=String (Full UTF-8)</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>body_text</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>Body Text</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Inbound Email Integration">f0b4bf8d475066109bc0ee2f316d433c</model>
+        <model_id>f0b4bf8d475066109bc0ee2f316d433c</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_f0b4bf8d475066109bc0ee2f316d433c</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:29</sys_created_on>
+        <sys_id>16c8c41947d066109bc0ee2f316d43fe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 04:56:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=16c8c41947d066109bc0ee2f316d43fe"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>inbound_email</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Inbound Email</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Inbound Email Integration">f0b4bf8d475066109bc0ee2f316d433c</model>
+        <model_id>f0b4bf8d475066109bc0ee2f316d433c</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_f0b4bf8d475066109bc0ee2f316d433c</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_email">sys_email</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual>type=received^sys_created_onONLast 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()^EQ</reference_qual>
+        <reference_qual_condition table="sys_email">type=received^sys_created_onONLast 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()^EQ<item display_value="received" endquery="false" field="type" goto="false" newquery="false" operator="=" or="false" value="received"/>
+            <item endquery="false" field="sys_created_on" goto="false" newquery="false" operator="ON" or="false" value="Last 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </reference_qual_condition>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:29</sys_created_on>
+        <sys_id>1ac8081947d066109bc0ee2f316d4304</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 04:56:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=1ac8081947d066109bc0ee2f316d4304"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>target_table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Target Table</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Inbound Email Integration">f0b4bf8d475066109bc0ee2f316d433c</model>
+        <model_id>f0b4bf8d475066109bc0ee2f316d433c</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_f0b4bf8d475066109bc0ee2f316d433c</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:29</sys_created_on>
+        <sys_id>1ec8c41947d066109bc0ee2f316d43f6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 04:56:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=1ec8c41947d066109bc0ee2f316d43f6"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=reference,uiTypeLabel=Reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>user</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>User</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Inbound Email Integration">f0b4bf8d475066109bc0ee2f316d433c</model>
+        <model_id>f0b4bf8d475066109bc0ee2f316d433c</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_f0b4bf8d475066109bc0ee2f316d433c</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_user">sys_user</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:29</sys_created_on>
+        <sys_id>6ec8081947d066109bc0ee2f316d4307</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 04:56:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6ec8081947d066109bc0ee2f316d4307"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8,uiTypeLabel=String (Full UTF-8)</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>subject</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>Subject</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Inbound Email Integration">f0b4bf8d475066109bc0ee2f316d433c</model>
+        <model_id>f0b4bf8d475066109bc0ee2f316d433c</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_f0b4bf8d475066109bc0ee2f316d433c</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:29</sys_created_on>
+        <sys_id>96c8081947d066109bc0ee2f316d4301</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 04:56:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=96c8081947d066109bc0ee2f316d4301"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8,uiTypeLabel=String (Full UTF-8)</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>from_address</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>From address</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Inbound Email Integration">f0b4bf8d475066109bc0ee2f316d433c</model>
+        <model_id>f0b4bf8d475066109bc0ee2f316d433c</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_f0b4bf8d475066109bc0ee2f316d433c</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:29</sys_created_on>
+        <sys_id>eec8081947d066109bc0ee2f316d430a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 04:56:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=eec8081947d066109bc0ee2f316d430a"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>target_table_name</dependent>
+        <dependent_on_field>target_table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>target_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Target Record</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Inbound Email Integration">f0b4bf8d475066109bc0ee2f316d433c</model>
+        <model_id>f0b4bf8d475066109bc0ee2f316d433c</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_f0b4bf8d475066109bc0ee2f316d433c</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:29</sys_created_on>
+        <sys_id>eec8081947d066109bc0ee2f316d4326</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 04:56:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=eec8081947d066109bc0ee2f316d4326"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=f0b4bf8d475066109bc0ee2f316d433c"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f0b4bf8d475066109bc0ee2f316d433c"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=f0b4bf8d475066109bc0ee2f316d433c^sys_idNOT IN66c8081947d066109bc0ee2f316d4345"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Inbound Email Integration">f0b4bf8d475066109bc0ee2f316d433c</flow>
+        <name>Inbound Email</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:29</sys_created_on>
+        <sys_id>66c8081947d066109bc0ee2f316d4345</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:21:45</sys_updated_on>
+        <trigger_definition display_value="Inbound Email">6f0180400b320300f4eb8bf637673ad4</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9WWXW/aMBSG/4qVazYFkhbK3bS10m5Wra22i6qLHOeEWDJ2ZjvQrOp/37GTQPgoK2uldTcIH9vn4z3PMdw+BIKmIIJpcD6nXBCmZMYtV9IEg4BLC1pScVOXgCc29uZUZtQqXQfTnAoDgyDXan4D81JQCyuj0hnoYDoMw0GwoKKC69p8ztAZupB07tyCC5xsOPcncevH+VdcsYKLTIMMprd3g6CkGu9Z5/Vha4s7x8NJOAyjeMzG0XAUhWEeQ0qH8eiEno1Po3yMDg+U/HROdo8I/erg3oLMIFuVvquQBppdSrE2FKgw+vy48kmsIj8rKnhek2XBWUF8JoYYS7Ultao0yYVavvcduDf8F+YUhy6+hhxQCeaSNLVJ/MWgZ08ybrA5dVe4V1ZxBpeli930xNJUQPOVKVHN5ZdGEFxnkNNK2G9tb9BSGXQKpSvb1dFxcF2o5VUX9YJLr1G7KRSjYrWi1mqeVhaMb2YnQ5JW2FZ3K1iMgkdfQ+Jk6RJpQyZN1nigLe2Cg2jhMkzz0n5gli86Gh8Ha9ovfed2EHfLmd84ju/RAb5VG2qxFq5NtyflcYyfhmkUIuH7GR9Dj/Gu0K1k7Ha9/UJegPJNAaTUXGluazJD7aVD2qIVOz3DUEQt3AdaNOEyVZXMGsa7A2aL7U2ynwD6zbG84IY30f32syD+A7LXVpWorWJgDJezXXhTpQRQeTS80QF4DQZdv4MJuGPUS7wG2uoKXgFqRDmePAl13od6V4pnpGu3VeqX/wLkvxcOctRg0KUEhig86LF3rzVZclv4FS7A2HdeOeLj/wPau3411k+bbWs33/44XEGJEl8BQxmJn4CdgfCSJB6NY2ciPjAT+FM8A5s0gr/qu56eDXEE4slJNIzcCEA6ZiHFfzSnGYvi9KQ3AvvK35+f3SNGv8oXvvbeL1G551s3+VBjFOMoa7ZGn0um5jiseMZl7t/8Dfgn/+dT/7co3/0GR8j5N3wLAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>email</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=f0b4bf8d475066109bc0ee2f316d433c^sys_idNOT INa2c8081947d066109bc0ee2f316d4347,e2c8081947d066109bc0ee2f316d434b,eec8081947d066109bc0ee2f316d4349"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment>Try to find a user with "from" email.</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Inbound Email Integration">f0b4bf8d475066109bc0ee2f316d433c</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:29</sys_created_on>
+        <sys_id>a2c8081947d066109bc0ee2f316d4347</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:21:45</sys_updated_on>
+        <ui_id>e2a2e258-f0db-4126-bf91-de9a755a5d43</ui_id>
+        <values>H4sIAAAAAAAA/9VYXW/bOgz9K4af01w7TuKkb8O6AAV2V2Dr9tIVgmzJjTBF8iS5XRrkv4+ybCfNd9IM6x5FkeIhecjQuZv5jPiXPhkGw2w47A3iIIiiIOj3oxSHSRL10yRIcNdv+QJPKGganHAKx0fMC3vWU40KTRWICNM5x9Nv1c1XJ03HjBNFhX95d9/yc6zgHQM3l7OVKzPNKeI4oRyMb60b75P12ToY4gvjdcjWQX1Ewj0tFbFYgpZPfxkqCAVXGeaatvwJFgQbqaaNRFFMbgRfCMZMGHjRt8q/NHuG5weB1csohJVSd9ccUZUhJ07HkqX0JjdMCidxQN2l5MVEfHIB2NzSDBfc1LkFCSQdEZpbzBZEhSj7MpZPn2uHIybK8KpLLlPMmxM2RrGkMFTbWlBOJ/AQmuA8Z+IB5Uo+stIYsEzaDxwO7YzLJ3Cq2YNo49QCb0OKcHsE8qtS/A0rZqP4H54py58xDtVGLulaFqrMyiNKeaHLC4WFdm/58zJX6GdhUbqoq/iQSxEo6FSx3LwDg0dahTJv1Szu7aTIcEGJVArCrE+9RGU6wYx/L8CWzGbXIpGFIN4HK0RhO1NygjABumo9n6+z/Tjj05ri/TLqQyPeaLwpDVV7vJBV7RGerT26QfCXGsSo4u31xz7Gu4D30D4kO0lAFvXWUhnkMrfE+3Uyn8zQEaOcvBjbB4CrjW8s2bxkug1vRdDM+liZ351/fn6/SXoCIIJcvpngTJQ/nwD0PLzt7aRGEq7woCz/0uJhZVin6+zFnpHe8+lTtqxrzd8DQNaGXwCRd+tQbgBez9f6+Yq60dmoG3WOoy4Q527WoG+ytiHB9ZZkS1frP1t9vKoP7FoyCOf3DfXfn+YzPNZnx/pc6c3oqOZcZpa7udpCsDPvYFuarfUnu3sMppU/5JoVPTHyQM3Ce61FpHnC/Mem+4pdTQ+V4b16nwt3rvzJ0j7HMjSBOrEclkxFU6CCRlhRlNk1DFXr5YI2tm4ZU9pUyusz5DM1hRKehJbzzJh6pbbXaJ9jshwQXW14nXl1eBUG7UF4Xhme14R3XDK2zKPuGXe918yjEazOZerhMyFf3tKVkmrLTNpTtR3lP3BgHQgqPCuo10+0TXzfONn2YP0nvjlfO3VSipNuB/fjKAyDIAxIHAziOBz0k6yP4262aDSEtEhhLMLLmf3QkwLVRKirGq6Plmpqnvi/CBj/Nyqna+tguLXxlRT2C7UTG8/ihTJ7Nd79EVXjIpGSUywW7Oz9tXnxVv46Kdjtam6c6OOmov2p3/KCfRXsZ0GvLSkGNOgMQpJeDOIwvuhmpH8xJLh3gYdJL44ITbvZ6T/P978BC1x7gzYUAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment>Create a Security Incident with short description and description fields.</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Inbound Email Integration">f0b4bf8d475066109bc0ee2f316d433c</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>9f1a2a4f-b95e-4dc8-ba0c-58c941e0988d</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:29</sys_created_on>
+        <sys_id>e2c8081947d066109bc0ee2f316d434b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:21:45</sys_updated_on>
+        <ui_id>acf0b40d-bdd9-4c02-b701-96f51e859999</ui_id>
+        <values>H4sIAAAAAAAA/9VUTW/bMAz9K4HOhmHFbdDkNmAL0MNaYB166TpBtphEgyx5+kjjBf7vo2wl7boFCIZhw3wj9fT4HkX6YU+kIAsyo1BczumsLmlZTotienVBq1lZ0akoOcAFyYjmDSDS80oBG4KMbLkKMbljdEYvi/mcOaiDlb5jUtdSgPaIEtK1inf3CXyXIJPrZ0i9kUpY0GTx8JiRllvk92DJYv/qyHctMMUrUMj0MWqZ3IxazvXxw+UTvmKV1zljRRRUZAR2HrQArLfiykFGGq4F98Z2ZOFtwIQFLm616o6IjUSbC0IidufkN2S/KiJuBWithvHsGLLUsjFdb4ys4bb10ugxMwhLh0aFRt+MJmKzYcWD8odmYyY45IM2So4ikqLV3cY8fTgUXEo9uEuHytRcHSPuvZVV8ODie4CCBolYw9tW6jVrrdnK4TJqafK1wiBfKfOERZ1c65zXUXiOHeL5EvNvh/Q9tzK6eI80eLkf3LOvIdYdfSTFbDSNAFdb2fo3SLeFJK7PDgMsAMfv1MPT6vmhh5l1L4bXbYz1UexAj1I/haIoxX5/rSsTtJi8a7hUjOYuVF+g9n3/+QywHGMGMc4rIzrmcXD6/ueF+PsCfnPdoEHZHiaj8Ozszh8IlhKUcL94isO+pQJsmwqknaN/auforBi+f7N5o87/bPFe/ANPrODjd+gDSf9FBgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment>Create a Security Incident with short description, description, and caller fields.</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Inbound Email Integration">f0b4bf8d475066109bc0ee2f316d433c</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>9e03adab-f802-4a6c-9897-e2b844d41557</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:29</sys_created_on>
+        <sys_id>eec8081947d066109bc0ee2f316d4349</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:43:01</sys_updated_on>
+        <ui_id>f91fef1c-4bfe-4f37-a9dd-9211ca56dfd8</ui_id>
+        <values>H4sIAAAAAAAA/9VUTW/bMAz9K4HOjmHZsZfkNmAL0MNaoB166TpBtuhEgyx7spwmC/zfR/kj7dp0yIYBQ30jxY/3SD7fHYgUZEkSCkG8oEkW0SgKgyCcz2iaRCkNRcQBZsQjmheAkZanClhneGTLVeOcO0YTGgeLBasha4y0eyZ1JgVoi1FC1pXi+9sh+GYImVw8hmQbqYQBTZZ39x6puMH6FgxZHp492X0FTPEUFFb67LBMLnss5/L4JfkVXq7Lc19phAMUeAR2FrQA7JdzVYNHCq4Ft6XZk6U1DToMcHGl1f4YsZFIc0mIi93V8gdWnwcuLgeklkH/djTZMLLenW1KmcFVZWWpe08HbHgsVVPoy56EGzbkvFF2HDZ6mhrrQeUgOxADovxmUz5cjw1XUnfshkdVZlwdLW6tkWljoXb7AAUFFmIFryqp16wy5VZ2yYil8NcKDT9X5QM2reVa+zxzwH2cEPdX6P/QuW+5kY7FJyyDyW3Hnn1vXN+ex4CY9aQxoM6MrOx7LLeFAVzrjQcsAM/vtcXT9HHR3c3WT4633pTGOrBdeYT6pQmCSBwOFzotGy0mHwsuFaN+3aTfILNt+/WMYNnbDJztp6XYYx5OVYEZUyDkIYTxfJoHIp3OaJhM03xBpwIW/F0c81jMIv8aMry8tn2pozeD+y/FDQWytTDp+Xpn73kssJKgRH1i8aO6hwZsOzQYFE7/lcJpEnTf/9F5j/ONyfzJH/e04Eeng/hCAJ3zZA7fghhH9RuBuKb9rZ9b6s+00Lbt/U9x7sDpcwcAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=f0b4bf8d475066109bc0ee2f316d433c"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=f0b4bf8d475066109bc0ee2f316d433c^sys_idNOT IN289ec411471466109bc0ee2f316d43d3,649ec411471466109bc0ee2f316d43d2,6ec8081947d066109bc0ee2f316d4348,6ec8081947d066109bc0ee2f316d434a"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">609ec411471466109bc0ee2f316d43d3</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Inbound Email Integration">f0b4bf8d475066109bc0ee2f316d433c</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id>7c76ed76-d0ed-4803-a630-759e5534a7fd</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 05:21:45</sys_created_on>
+        <sys_id>289ec411471466109bc0ee2f316d43d3</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:43:06</sys_updated_on>
+        <ui_id>ea9e6f24-e72a-4dc9-9b9d-2f5dfcdc1e76</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">ac9ec411471466109bc0ee2f316d43d1</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Inbound Email Integration">f0b4bf8d475066109bc0ee2f316d433c</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 05:21:45</sys_created_on>
+        <sys_id>649ec411471466109bc0ee2f316d43d2</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:43:06</sys_updated_on>
+        <ui_id>7c76ed76-d0ed-4803-a630-759e5534a7fd</ui_id>
+        <values>H4sIAAAAAAAA/+1Uy27bMBD8lVZnWaCesX0LWgQo0DZAE+TSBsKKpGyiFKmSlB3X8L93qYdtNA5aFDn2Jg65uzPjHe8D3bm2c/ZeX1srVipYfn0MA6E8ht/7QEHDg2VAtWLCCa3KHgiDDcjOX+AnE7aVsHs4IXQtJDN87NaCwRrHTbDc/3bldi0vJVRcYuGdM0KtsFwwPNUE6nhBY5omRZoQksyzuCrSKk5YChxSfDcVvpvIvfnYI+GLrP08xO00SRvmacUkDPiT44pxHF2DtDwMGlAMnDa7I2I4sFslT8BaKDcobuDJip/YO8lz/7DmqJGOdhyP5WjV5JIWlN+2nuCAOKjkZKGWXaM+Dzq8ybyGTrozkzuL/XjrSXsWI6X6bq23X6aBN0L1AsdLqSnI4wkc2lB1jlv/w3DJG2xUNtC2aE7ZGr0RfTFyaaKVxENUS73FoX5TIqCeeIQeQXSD+PsefgAjvIpP2AaLB5oVWEHLfquwnTMo4dDbUv7oPKFB4CilHNzAB5Ya0bprnLPhI+tD+Hwlz7Zxv69Z6QwoW2vTLOdxQRiBfLagi3iWzbN8Nq/ybJbVBSNXWUzi4upwePutIyRlPa1n2/wKHV8jDQvI6zwm+eU0ZMWlNFzIwcsRSP4QAa/lLxNACPkfgfMICFsOqzxq64f/cwIe/boPE+ywN4xTYZHIvcc+TP/d/mKHCyDoObTV5ruXcMIOvwDB9l2fBQYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">aec8081947d066109bc0ee2f316d4347</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Inbound Email Integration">f0b4bf8d475066109bc0ee2f316d433c</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:29</sys_created_on>
+        <sys_id>6ec8081947d066109bc0ee2f316d4348</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:43:06</sys_updated_on>
+        <ui_id>9e03adab-f802-4a6c-9897-e2b844d41557</ui_id>
+        <values>H4sIAAAAAAAA/+1UXWvbMBT9K8bPSbCdOGvyVroVCms7mlAYo5hr6aoRlSVPkptmIf99V7aThrVlo9vj3qxzv8659+BtbBpfN94tzalz8l7H8293g1jqgNH3NtZQYTyPmdFceml00QKD+BFUEwJnK2QPkRQRRI1DG62lX0XCmirCCqSK1uAiYRrNqYZLVyvY3L6jlK2k4hZ7fjVYYuHRxvPtLyG/qbFQUKKiCQtvpb6ncsnpJRIQ6YylbJxNx1mSZCeTtJyOyzTjY0AYU96+8GwvN/rcIoM39xDmEe72k4zlgVaaDGJ88qg50mgByuEgrkBz8MZuDohF4NdaPQMrqT21i0Pyk5M/qHeW5yFRIGlk2AUPz6LfaQezlZEMr+tAsEM8lKqvYUY1lb7qdIRroIBG+f01CKErFBzrQDqw6CmJxcqsb/YDz6VuBfZBZRiowws8raFsPLpwGFRYUaOigrqm5RS1NY+yLSYu1ehe0WMklFnT0OC9EbBAfEQ7gtE54R9b+BasDCouqQ0VdzRLcJIVrU+pnbckYdeupfjeBEKdwF5K0W2DEhyzsvanNOcRe9a7wUuTH/l7u8UMMszyk6FIeDmcpNl0WIpZOuQ4gw95DjmfjEc3yOjyu93F4up6+enyy/LrS7//Tat/4f8Z5CJPk/x1/0+mr/n/Fee/bfrsN6YPZ/pDzydJ8t/0x6aXrujM22trh7/b83fB4N0E1/mGI5OOiCwDdrH//4fAhgwg2TG0NvYhSHjGdj8BMjuTN0kGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">a6c8081947d066109bc0ee2f316d434a</block>
+        <comment/>
+        <connected_to>9e03adab-f802-4a6c-9897-e2b844d41557</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Inbound Email Integration">f0b4bf8d475066109bc0ee2f316d433c</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:29</sys_created_on>
+        <sys_id>6ec8081947d066109bc0ee2f316d434a</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:43:06</sys_updated_on>
+        <ui_id>9f1a2a4f-b95e-4dc8-ba0c-58c941e0988d</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=f0b4bf8d475066109bc0ee2f316d433c^sys_idNOT IN289ec411471466109bc0ee2f316d43d9,540e0cdd47d066109bc0ee2f316d43ad,5c0e0cdd47d066109bc0ee2f316d43ac,e89ec411471466109bc0ee2f316d43d9"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>f0b4bf8d475066109bc0ee2f316d433c</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Inbound Email_1.subject}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 05:21:45</sys_created_on>
+        <sys_id>289ec411471466109bc0ee2f316d43d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:21:45</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>8160d0a5-9c91-4845-8b54-4f6d07410167</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>f0b4bf8d475066109bc0ee2f316d433c</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>d9c1e311-abce-442a-bbb9-98506061ec0a</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 05:19:17</sys_created_on>
+        <sys_id>540e0cdd47d066109bc0ee2f316d43ad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:19:17</sys_updated_on>
+        <transform_compositions>[{"id":"2931d0c0c313201027d44077d840dd45","transformType":null,"transformDefinition":null,"order":0,"parameters":[{"id":null,"name":"string","label":"String","order":0,"attributes":{},"value":"Security Incident:","type":"string","defaultValue":"","typeLabel":null,"mandatory":true,"choices":[]}]}]</transform_compositions>
+        <transform_definition_id display_value="starts_with">40883c520f032010406f3a3485767ec4</transform_definition_id>
+        <ui_id>b5374834-24ef-48f2-8e27-730c2427622f</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>f0b4bf8d475066109bc0ee2f316d433c</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Inbound Email_1.subject}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 05:19:17</sys_created_on>
+        <sys_id>5c0e0cdd47d066109bc0ee2f316d43ac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:19:17</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>d9c1e311-abce-442a-bbb9-98506061ec0a</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>f0b4bf8d475066109bc0ee2f316d433c</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>8160d0a5-9c91-4845-8b54-4f6d07410167</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 05:21:45</sys_created_on>
+        <sys_id>e89ec411471466109bc0ee2f316d43d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:21:45</sys_updated_on>
+        <transform_compositions>[{"id":"2931d0c0c313201027d44077d840dd45","transformType":null,"transformDefinition":null,"order":0,"parameters":[{"id":null,"name":"string","label":"String","order":0,"attributes":{},"value":"Security Incident:","type":"string","defaultValue":"","typeLabel":null,"mandatory":true,"choices":[]}]}]</transform_compositions>
+        <transform_definition_id display_value="starts_with">40883c520f032010406f3a3485767ec4</transform_definition_id>
+        <ui_id>60c8c61d-eb10-4982-8768-b8e65147112e</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=f0b4bf8d475066109bc0ee2f316d433c"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>user</element>
+        <help/>
+        <hint/>
+        <label>User</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_f0b4bf8d475066109bc0ee2f316d433c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:29</sys_created_on>
+        <sys_id>22c8081947d066109bc0ee2f316d430a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 04:56:29</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>from_address</element>
+        <help/>
+        <hint/>
+        <label>From address</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_f0b4bf8d475066109bc0ee2f316d433c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:29</sys_created_on>
+        <sys_id>22c8081947d066109bc0ee2f316d4326</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 04:56:29</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>target_record</element>
+        <help/>
+        <hint/>
+        <label>Target Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_f0b4bf8d475066109bc0ee2f316d433c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:29</sys_created_on>
+        <sys_id>26c8081947d066109bc0ee2f316d4329</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 04:56:29</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>subject</element>
+        <help/>
+        <hint/>
+        <label>Subject</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_f0b4bf8d475066109bc0ee2f316d433c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:29</sys_created_on>
+        <sys_id>5ac8081947d066109bc0ee2f316d4303</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 04:56:29</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>target_table_name</element>
+        <help/>
+        <hint/>
+        <label>Target Table</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_f0b4bf8d475066109bc0ee2f316d433c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:29</sys_created_on>
+        <sys_id>5ec8c41947d066109bc0ee2f316d43fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 04:56:29</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>inbound_email</element>
+        <help/>
+        <hint>The record representing the inbound email.</hint>
+        <label>Inbound Email</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_f0b4bf8d475066109bc0ee2f316d433c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:29</sys_created_on>
+        <sys_id>6ec8081947d066109bc0ee2f316d4306</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 04:56:29</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>body_text</element>
+        <help/>
+        <hint/>
+        <label>Body Text</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_f0b4bf8d475066109bc0ee2f316d433c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:29</sys_created_on>
+        <sys_id>d6c8081947d066109bc0ee2f316d4300</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 04:56:29</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_f0b4bf8d475066109bc0ee2f316d433c"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_f0b4bf8d475066109bc0ee2f316d433c"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>ServiceNow should create a Security Incident record when receive an email and email subject starts with "Security Incident:"</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>inbound_email_integration</internal_name>
+        <label_cache>[{"name":"Inbound Email_1.inbound_email.body","label":"Trigger - Inbound Email➛Email Record➛Body","reference":"","reference_display":"Body","type":"string_full_utf8","base_type":"string_full_utf8","parent_table_name":"sys_email","column_name":"body","usedInstances":{"f91fef1c-4bfe-4f37-a9dd-9211ca56dfd8":["description"]}},{"name":"Inbound Email_1.subject","label":"Trigger - Inbound Email➛Subject","type":"string_full_utf8","base_type":"string_full_utf8","usedInstances":{"f91fef1c-4bfe-4f37-a9dd-9211ca56dfd8":["short_description"],"acf0b40d-bdd9-4c02-b701-96f51e859999":["short_description"]},"attributes":{"test_input_hidden":"true"}},{"name":"Inbound Email_1.body_text","label":"Trigger - Inbound Email➛Body Text","type":"string_full_utf8","base_type":"string_full_utf8","usedInstances":{"f91fef1c-4bfe-4f37-a9dd-9211ca56dfd8":["description"]},"attributes":{"test_input_hidden":"true"}},{"name":"Inbound Email_1.from_address","label":"Trigger - Inbound Email➛From address","type":"string_full_utf8","base_type":"string_full_utf8","usedInstances":{"e2a2e258-f0db-4126-bf91-de9a755a5d43":["conditions"]},"attributes":{"test_input_hidden":"true"}},{"name":"e2a2e258-f0db-4126-bf91-de9a755a5d43.Record","label":"3 - Look Up Record➛User Record","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"f91fef1c-4bfe-4f37-a9dd-9211ca56dfd8":["caller"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Inbound Email_1.inbound_email.body_text","label":"Trigger - Inbound Email➛Email Record➛Body text","reference":"","reference_display":"Body text","type":"string_full_utf8","base_type":"string_full_utf8","parent_table_name":"sys_email","column_name":"body_text","usedInstances":{"acf0b40d-bdd9-4c02-b701-96f51e859999":["description"],"f91fef1c-4bfe-4f37-a9dd-9211ca56dfd8":["description"]}}]</label_cache>
+        <master>true</master>
+        <name>Inbound Email Integration</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Inbound Email Integration">f0b4bf8d475066109bc0ee2f316d433c</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:35</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>88d8481947d066109bc0ee2f316d432a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:43:09</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=88d8481947d066109bc0ee2f316d432a"/>
+    <sys_variable_value action="delete_multiple" query="document_key=88d8481947d066109bc0ee2f316d432a"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=88d8481947d066109bc0ee2f316d432a"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=88d8481947d066109bc0ee2f316d432a^sys_idNOT IN0cd8481947d066109bc0ee2f316d432b"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>88d8481947d066109bc0ee2f316d432a</id>
+        <name>Inbound Email Integration</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:35</sys_created_on>
+        <sys_id>0cd8481947d066109bc0ee2f316d432b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 04:56:35</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=0cd8481947d066109bc0ee2f316d432b"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=88d8481947d066109bc0ee2f316d432a^sys_idNOT IN0cd8481947d066109bc0ee2f316d438d,48d8481947d066109bc0ee2f316d4345,48d8481947d066109bc0ee2f316d437f,84d8481947d066109bc0ee2f316d434c,88d8481947d066109bc0ee2f316d4378,88d8481947d066109bc0ee2f316d4386,c8d8481947d066109bc0ee2f316d432c"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>target_table_name</dependent>
+        <dependent_on_field>target_table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>target_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Target Record</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Inbound Email Integration">88d8481947d066109bc0ee2f316d432a</model>
+        <model_id>88d8481947d066109bc0ee2f316d432a</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_88d8481947d066109bc0ee2f316d432a</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:36</sys_created_on>
+        <sys_id>0cd8481947d066109bc0ee2f316d438d</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:43:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0cd8481947d066109bc0ee2f316d438d"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>target_table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Target Table</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Inbound Email Integration">88d8481947d066109bc0ee2f316d432a</model>
+        <model_id>88d8481947d066109bc0ee2f316d432a</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_88d8481947d066109bc0ee2f316d432a</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:36</sys_created_on>
+        <sys_id>48d8481947d066109bc0ee2f316d4345</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:43:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=48d8481947d066109bc0ee2f316d4345"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>user</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>User</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Inbound Email Integration">88d8481947d066109bc0ee2f316d432a</model>
+        <model_id>88d8481947d066109bc0ee2f316d432a</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_88d8481947d066109bc0ee2f316d432a</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_user">sys_user</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:36</sys_created_on>
+        <sys_id>48d8481947d066109bc0ee2f316d437f</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:43:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=48d8481947d066109bc0ee2f316d437f"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>subject</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>Subject</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Inbound Email Integration">88d8481947d066109bc0ee2f316d432a</model>
+        <model_id>88d8481947d066109bc0ee2f316d432a</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_88d8481947d066109bc0ee2f316d432a</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:36</sys_created_on>
+        <sys_id>84d8481947d066109bc0ee2f316d434c</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:43:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=84d8481947d066109bc0ee2f316d434c"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>inbound_email</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Inbound Email</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Inbound Email Integration">88d8481947d066109bc0ee2f316d432a</model>
+        <model_id>88d8481947d066109bc0ee2f316d432a</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_88d8481947d066109bc0ee2f316d432a</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_email">sys_email</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual>type=received^sys_created_onONLast 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()^EQ</reference_qual>
+        <reference_qual_condition table="sys_email">type=received^sys_created_onONLast 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()^EQ<item display_value="received" endquery="false" field="type" goto="false" newquery="false" operator="=" or="false" value="received"/>
+            <item endquery="false" field="sys_created_on" goto="false" newquery="false" operator="ON" or="false" value="Last 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </reference_qual_condition>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:36</sys_created_on>
+        <sys_id>88d8481947d066109bc0ee2f316d4378</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:43:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=88d8481947d066109bc0ee2f316d4378"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>from_address</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>From address</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Inbound Email Integration">88d8481947d066109bc0ee2f316d432a</model>
+        <model_id>88d8481947d066109bc0ee2f316d432a</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_88d8481947d066109bc0ee2f316d432a</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:36</sys_created_on>
+        <sys_id>88d8481947d066109bc0ee2f316d4386</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:43:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=88d8481947d066109bc0ee2f316d4386"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>body_text</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>Body Text</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Inbound Email Integration">88d8481947d066109bc0ee2f316d432a</model>
+        <model_id>88d8481947d066109bc0ee2f316d432a</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_88d8481947d066109bc0ee2f316d432a</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:35</sys_created_on>
+        <sys_id>c8d8481947d066109bc0ee2f316d432c</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:43:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c8d8481947d066109bc0ee2f316d432c"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=88d8481947d066109bc0ee2f316d432a"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=88d8481947d066109bc0ee2f316d432a"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=88d8481947d066109bc0ee2f316d432a^sys_idNOT IN5cd8481947d066109bc0ee2f316d43aa"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Inbound Email Integration">88d8481947d066109bc0ee2f316d432a</flow>
+        <name>Inbound Email</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:36</sys_created_on>
+        <sys_id>5cd8481947d066109bc0ee2f316d43aa</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:21:51</sys_updated_on>
+        <trigger_definition display_value="Inbound Email">6f0180400b320300f4eb8bf637673ad4</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9WWXW/aMBSG/4qVazYFkhbK3bS10m5Wra22i6qLHOeEWDJ2ZjvQrOp/37GTQPgoK2uldTcIH9vn4z3PMdw+BIKmIIJpcD6nXBCmZMYtV9IEg4BLC1pScVOXgCc29uZUZtQqXQfTnAoDgyDXan4D81JQCyuj0hnoYDoMw0GwoKKC69p8ztAZupB07tyCC5xsOPcncevH+VdcsYKLTIMMprd3g6CkGu9Z5/Vha4s7x8NJOAyjeMzG0XAUhWEeQ0qH8eiEno1Po3yMDg+U/HROdo8I/erg3oLMIFuVvquQBppdSrE2FKgw+vy48kmsIj8rKnhek2XBWUF8JoYYS7Ultao0yYVavvcduDf8F+YUhy6+hhxQCeaSNLVJ/MWgZ08ybrA5dVe4V1ZxBpeli930xNJUQPOVKVHN5ZdGEFxnkNNK2G9tb9BSGXQKpSvb1dFxcF2o5VUX9YJLr1G7KRSjYrWi1mqeVhaMb2YnQ5JW2FZ3K1iMgkdfQ+Jk6RJpQyZN1nigLe2Cg2jhMkzz0n5gli86Gh8Ha9ovfed2EHfLmd84ju/RAb5VG2qxFq5NtyflcYyfhmkUIuH7GR9Dj/Gu0K1k7Ha9/UJegPJNAaTUXGluazJD7aVD2qIVOz3DUEQt3AdaNOEyVZXMGsa7A2aL7U2ynwD6zbG84IY30f32syD+A7LXVpWorWJgDJezXXhTpQRQeTS80QF4DQZdv4MJuGPUS7wG2uoKXgFqRDmePAl13od6V4pnpGu3VeqX/wLkvxcOctRg0KUEhig86LF3rzVZclv4FS7A2HdeOeLj/wPau3411k+bbWs33/44XEGJEl8BQxmJn4CdgfCSJB6NY2ciPjAT+FM8A5s0gr/qu56eDXEE4slJNIzcCEA6ZiHFfzSnGYvi9KQ3AvvK35+f3SNGv8oXvvbeL1G551s3+VBjFOMoa7ZGn0um5jiseMZl7t/8Dfgn/+dT/7co3/0GR8j5N3wLAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>email</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=88d8481947d066109bc0ee2f316d432a^sys_idNOT IN90d8481947d066109bc0ee2f316d43a9,d4d8481947d066109bc0ee2f316d43aa,dcd8481947d066109bc0ee2f316d43a9"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment>Try to find a user with "from" email.</comment>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Inbound Email Integration">88d8481947d066109bc0ee2f316d432a</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:36</sys_created_on>
+        <sys_id>90d8481947d066109bc0ee2f316d43a9</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:21:52</sys_updated_on>
+        <ui_id>e2a2e258-f0db-4126-bf91-de9a755a5d43</ui_id>
+        <values>H4sIAAAAAAAA/+VYTW/bOBD9K4LOjiv5S3Zui6QGArQN0KS9dAuCEqmYKE2qJJXUMfzfOxQlWbAV28I6QII9cjgk3wzfGw31Y+0z4l/6ZBbM0tlsPI2CYDgMgslkmOAwjoeTJA5iPPJ7vsBLCp4Gx5zC8BHz3I71SqNcUwUmwnTG8ep7OfPNWZMF40RR4V/++NnzM6xgHwMzl+udqVOBcBxTDq73JZIdYGaV1UNUzDnbp+Yy74ubkIpYKEHPp38MFYQChhRzTXv+EguCjVSr2qIoJreCbw0LJgzs6FvnP5o9w7nTwPqlFKJKqJurh6hMkDOn19jgO6PyxOSqdE0WkiVUu3wQmuKcm6umzTncZoZJ4Za4sN1qyfOl+OLS4dcbVPcBFrgoRGhmA7XIyzDSu4V8+lqhnDNR5KSc5DLBvB5hYxSLc2PxrH3K6RI2QkucZUw8oEzJR1YsBizL/gOHQT/l8gkO1exB9HFigfchr7g/B/t1Yf6OFbNRfIZtCsqkjANDkLtCLXNVpPIRJTzXxYTCQru9/E3PUvCKY623kUPK0e/c4nZ5KCNGLml2SaJYZv6BLR5pGdymV2lhfJCCsy3lEikIsyh0QxB0iRn/N4e1ZL2+EbHMBfE+WiMK+6mSS4QJkF7rzWZfM90Wd5TW8bgqaV01A2sLthTZnu1T2walyMKziWwUBO9JZnD421NZd924FBwRT0gOkoxs+aSlMsjlsqGefUl05vkJECqe31pmevHqJVQlzVNGOWn7lsztxM63ZPD//Ja8SZIDIILc7THBmSgaAwD6WuwfH6ReHO7wrKBXo5WyNqyTfQ1gz0jvubMSToBTKeEOzvbuHZ4WiFW9LyizW+srYymA4dkEMBycRwDrOsw6kS05r3pBe5uV/7P1x7v+QMHGgnDTJrBOZ4Zdzxxs9gU87KTgJtnczPULnDtz0/iCInuvWQIWsLQ8Dzn9oidGHqjZnl55EWmeMP/VNl8yDlUXVYT3Cg1oePANFDcaUJaiJdwcy6BPVjQBcmiEFUWp7RtR2SFviWRvMmVKm9J5v9B8paAf4UkQpmcW1Cu8vdq744f4eBxVKm9SrwqkPE17EIhXBOLVgXQLu0vRGp2xOT130ZpD+1/cBjx+suZLQympXihcRy7yACNOrGonggrPCuq/l702CbSWvyNY38VL+vylKaE4Hg3wJBqGYRCEAYmCaRSF00mcTnA0SrcaRUiLBKop7Jza56sUqKJGdc/hfv0pi223OnMCqIqB11LY1/UgMp5FBdfrVaiO4y7rSSwlp1jsFJR7QP5hXnwRarqO31xReRe/lXJ2v5tpZ2rN9Wu1DTn7JtjvnN5Yik1pMJiGJLmYRmF0MUrJ5GJG8PgCz+JxNCQ0GaXn7AR+/gWt6xN6mBUAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment>Create a Security Incident with short description and description fields.</comment>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Inbound Email Integration">88d8481947d066109bc0ee2f316d432a</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>9f1a2a4f-b95e-4dc8-ba0c-58c941e0988d</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:36</sys_created_on>
+        <sys_id>d4d8481947d066109bc0ee2f316d43aa</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:21:52</sys_updated_on>
+        <ui_id>acf0b40d-bdd9-4c02-b701-96f51e859999</ui_id>
+        <values>H4sIAAAAAAAA/9VU72vbMBD9V4I+G2PHbWjybbQLFLYWlpEvXStk65xoyLInyWm84P99J0v5QdewDsag+XZ3707vne/lYUcEJzMySSG5nKaTIkuzbJwk46uLNJ9keTrmGQO4IBFRrAJEWpZLoEMQkQ2TrUtuaTpJL5PplBooWi1sR4UqBAdlEcWFaSTrlgG8CJDR7RFSrIXkGhSZPTxGpGEa51vQZLZ7UXorW8lykAj96uieYW+75tXcp9Pe0Z0v1Jo7PklEYGtBcUAiJZMGIlIxxZmtdUdmVreY0MD4vZLdAbEWqHJGiMNujfiJz14lDlcCKivA1w4hDRvz6fKGWbbAyYVtdYAW61oUYPxOOJSslfb6NOcB940VtfItg8zQXcu2Und+JeQwYP+BMNMaJAGN0+mYBxnlYl0/f9mznAs1rCQUZV0weYiYtVrkrXV8dgQkVDiIVqxphFrRRtcbMTQjlypeSQziUtbP+KgRKxWzwhGPca0snmP+ZkgvmRZOxWccg819RExnriUz5qgFl0h/tI6JVxY0UL8G11Jo0dgP+MAGAt0+2tuAAx7xucNK8+MhDZdvTixg1rW2jv4wHsl/a5Mk47vdrcrrVvHRx4oJSdPYtPl3KGzfP70BLHxMwcVxXvOOWry/vv/dVv+fwF+a9s+73Zt2LkBy88qy946FCpVboH75L1wbiqNlKAbnpv/KuekkGX7vyL9e3Lu378k/9RkjP/4Cxx/C4tEGAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment>Create a Security Incident with short description, description, and caller fields.</comment>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Inbound Email Integration">88d8481947d066109bc0ee2f316d432a</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>9e03adab-f802-4a6c-9897-e2b844d41557</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:36</sys_created_on>
+        <sys_id>dcd8481947d066109bc0ee2f316d43a9</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:43:08</sys_updated_on>
+        <ui_id>f91fef1c-4bfe-4f37-a9dd-9211ca56dfd8</ui_id>
+        <values>H4sIAAAAAAAA/9VV30/bMBD+Vyo/p1F+tB3t2wRDQtpAgokXYJFjX6gnx8lsp5BV+d93jpNSQdlA2gt5u+++O3939l1utkRwsiKLGKL5Ml6wNE7TJIqSo1mcL9I8TnhKAWYkIIqWgExLcwlZbwRkQ2XjwMcsXsTzaLnMDLBGC9tmQjHBQVlkcWFqSdvrgXw1UCZnTxS2FpJrUGR1cxeQmmrMb0GT1faZ661qJc1BIvW7k/uKetvWB7Gv+7GTc++oNHd6ooDAowXFAYUUVBoISEkVp7bSLVlZ3SCggfILJdsdYy2wyhUhjvtoxG889ihyvAKwMgbetzOzoWMeLk6opVeYmdlGD1S2rgQD43vCoaCNtMf7mCdc1FZUyof0ZQ7RlWxKde5bQnYJxgtCpDEoAmpXp1M+lFFcrauHy1HlqVB9SwanrBiVO4taq0XeWKdnS0BCiYmykta1UPdZrauN6INRSxneSzTCQlYPeKgR9yqkzAkPsa00PEX8pIevqRauim+YBoO7gJjWHEtqzFMt2MTsV+OU+MqGGjLfBhfCtKjtZzxgA4PcLhjHgAM+4tceVpw/PaT+5Zu9ETDrSlsnv0+P4m+bKEr5dnum8qpRfPKlpEJmcWia/Ccw23U/3kAW3s7A2WFe8RbjsM8S9BgCCU0gmR9Ni4jn01mcLKZ5sYynHJb003xO53yWhpfA8AF33ctp/DC637ki/n2T44o4FSC5OXC1436AEhtmIfNX/WxHDM7J9eAc9kT8v/ZEvIj67wNtC1/ch18We/+Fw2tjBJ3oF2PUgwdj6Ab42Ly/jJk71E/MW1O9b6K6rrv7A6DtzGz/BwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=88d8481947d066109bc0ee2f316d432a"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=88d8481947d066109bc0ee2f316d432a^sys_idNOT IN469e0811471466109bc0ee2f316d43fd,8a9e0811471466109bc0ee2f316d43fe,90d8481947d066109bc0ee2f316d43a8,9cd8481947d066109bc0ee2f316d43a6"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">ac9ec411471466109bc0ee2f316d43d1</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Inbound Email Integration">88d8481947d066109bc0ee2f316d432a</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 05:21:51</sys_created_on>
+        <sys_id>469e0811471466109bc0ee2f316d43fd</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:43:08</sys_updated_on>
+        <ui_id>7c76ed76-d0ed-4803-a630-759e5534a7fd</ui_id>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8lZZn2aAsybF9CxIEKJA2QBPk0gbCiqRsohSpkpQdV/C/dynJDzQu2qA59iYOubsz4x24JabxdePdg7l0Ti41WXx5iojUAcPvlmioBFkQZjSXXhqdd0BE1qCacIGfXLpawfbxiLCVVNyKoVsNFmu8sGTR/nIlORaUFMp4zmKWTKbJhNLJLI2LaVLEE56AgAQbKiiEwqdXexrvbjsk+i0/v60D7ryVejmcb4cu93vQWB5YxTQi4tkLzQXyKUE5EZEKNAdv7PaAWAH8TqsjsJLa94IreHbyBw6cZFl4WAqUyAY3Dsd8cKqHy2vwgFQa5ht7MM5IJlxvDhclNMpfnWL9g7s6SO1LPBRqX21UU+lPvSPk0ODkh2kckhB1UBqoDzrK+5XZfN6zvJG6c2W4VIaBOpzAo3dF4wOflgglKmyUV1DX6GheW7OWXTFyqcZLhYdxqcwGh4btGgMLxMdoLIxvEL/u4EewMqj4iG2wuKdZgJMs7zYR26FNguwi4rbuSoFzR5Hobv69CRR7yYO4vPcnlDAra3+Jk9di0LGLXi72yU63bclzb0G70thqMYunlFPIRnM2j0fpLM1GsyJLR2k55fQijWk8vdjt3n9tKE14R/RFJt6g4+syNYeszGKanc9UOj2XqTNpemWQJn8IUpDylzmilP4P0j8HSbq8X/9BWzf8DXP0FELTzzx4zaRDag8B+7D/HwkXW1wuyU6hjbHfgqgjtvsJNNOnEZEGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">609ec411471466109bc0ee2f316d43d3</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Inbound Email Integration">88d8481947d066109bc0ee2f316d432a</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id>7c76ed76-d0ed-4803-a630-759e5534a7fd</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 05:21:51</sys_created_on>
+        <sys_id>8a9e0811471466109bc0ee2f316d43fe</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:43:08</sys_updated_on>
+        <ui_id>ea9e6f24-e72a-4dc9-9b9d-2f5dfcdc1e76</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">a6c8081947d066109bc0ee2f316d434a</block>
+        <comment/>
+        <connected_to>9e03adab-f802-4a6c-9897-e2b844d41557</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Inbound Email Integration">88d8481947d066109bc0ee2f316d432a</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:36</sys_created_on>
+        <sys_id>90d8481947d066109bc0ee2f316d43a8</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:43:08</sys_updated_on>
+        <ui_id>9f1a2a4f-b95e-4dc8-ba0c-58c941e0988d</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">aec8081947d066109bc0ee2f316d4347</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Inbound Email Integration">88d8481947d066109bc0ee2f316d432a</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:36</sys_created_on>
+        <sys_id>9cd8481947d066109bc0ee2f316d43a6</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:43:08</sys_updated_on>
+        <ui_id>9e03adab-f802-4a6c-9897-e2b844d41557</ui_id>
+        <values>H4sIAAAAAAAA/+1VXU/bMBT9K5Gf0ypJm47yhmBISHxMUE2aJhTd2NfUwokz26F0Vf/7rpO0oMG0Mfa4t/jY995zjn2UDTOtb1rvFubIOXVXs8OvtzFTdcDoe8NqqJAdMm5qobwyddEBMXsA3YaN4yXy+0jJCKLWoY1Wyi8jaU0VYQVKRytwkTRtLahGKNdoWH/+i1K+VFpYHPg1YImFR8sONz9tKUGdZQIynfOUT7LZJEuS7GCalrNJmWZiAggTaqihRB1I7IRF5x0S/1KxXzcBd96q+m5Ynw9dbnagsSKwSpOY4aPHWiDxkaAdxqyCWoA3dr1HLIK4qvUTsFS1p3YsHH506jsNzPI8HJRIEjn2m/tlMVjaw/IEPBCVlvvWDkf50iiOrjdHoIRW++PnWH/gqglS+xIPpd5VG91W9WXvCNs32N0gIXRzhcAmKA3UBx3yZmlW1zuWp6ruXBk2teGg9yvw5F3Z+sBnw1BjRY2KCpqGHC0aax5UV0xcqvGdpsVYarOioeG9joEH4mMyFsanhJ908GewKqi4oDZU3NMswSledG+b2pFNyLYxc2t3rMG5J5HkbvGtDRR7yYO4ovcnlHCrGn9Ekx9w0LGNX0blWUo2G8wgwyw/GMlElKNpms1GpZynI4Fz+JDnkIvpZHyNnB7Qdnt2c3m1+HjxafHlZWre0+ptKZpDLvM0yV9P0XT2Wopeyc8bo5P9Jjrh3v4wOUmS/I/Ou6OjXNE/+EFbN/wfJuc2xKSfufeaK0fUFgE72/2LwsaaHpfiz6GVsfdB1BO2/QGbHLwm1QYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=88d8481947d066109bc0ee2f316d432a^sys_idNOT IN1a9e4811471466109bc0ee2f316d4337,569e4811471466109bc0ee2f316d4337,929e4811471466109bc0ee2f316d4337,de9e4811471466109bc0ee2f316d4336"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>88d8481947d066109bc0ee2f316d432a</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>d9c1e311-abce-442a-bbb9-98506061ec0a</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 05:21:52</sys_created_on>
+        <sys_id>1a9e4811471466109bc0ee2f316d4337</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:21:52</sys_updated_on>
+        <transform_compositions>[{"id":"2931d0c0c313201027d44077d840dd45","transformType":null,"transformDefinition":null,"order":0,"parameters":[{"id":null,"name":"string","label":"String","order":0,"attributes":{},"value":"Security Incident:","type":"string","defaultValue":"","typeLabel":null,"mandatory":true,"choices":[]}]}]</transform_compositions>
+        <transform_definition_id display_value="starts_with">40883c520f032010406f3a3485767ec4</transform_definition_id>
+        <ui_id>b5374834-24ef-48f2-8e27-730c2427622f</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>88d8481947d066109bc0ee2f316d432a</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Inbound Email_1.subject}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 05:21:52</sys_created_on>
+        <sys_id>569e4811471466109bc0ee2f316d4337</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:21:52</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>8160d0a5-9c91-4845-8b54-4f6d07410167</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>88d8481947d066109bc0ee2f316d432a</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Inbound Email_1.subject}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 05:21:52</sys_created_on>
+        <sys_id>929e4811471466109bc0ee2f316d4337</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:21:52</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>d9c1e311-abce-442a-bbb9-98506061ec0a</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>88d8481947d066109bc0ee2f316d432a</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>8160d0a5-9c91-4845-8b54-4f6d07410167</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 05:21:52</sys_created_on>
+        <sys_id>de9e4811471466109bc0ee2f316d4336</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 05:21:52</sys_updated_on>
+        <transform_compositions>[{"id":"2931d0c0c313201027d44077d840dd45","transformType":null,"transformDefinition":null,"order":0,"parameters":[{"id":null,"name":"string","label":"String","order":0,"attributes":{},"value":"Security Incident:","type":"string","defaultValue":"","typeLabel":null,"mandatory":true,"choices":[]}]}]</transform_compositions>
+        <transform_definition_id display_value="starts_with">40883c520f032010406f3a3485767ec4</transform_definition_id>
+        <ui_id>60c8c61d-eb10-4982-8768-b8e65147112e</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=88d8481947d066109bc0ee2f316d432a"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>body_text</element>
+        <help/>
+        <hint/>
+        <label>Body Text</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_88d8481947d066109bc0ee2f316d432a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:35</sys_created_on>
+        <sys_id>00d8481947d066109bc0ee2f316d4343</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 04:56:35</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>inbound_email</element>
+        <help/>
+        <hint>The record representing the inbound email.</hint>
+        <label>Inbound Email</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_88d8481947d066109bc0ee2f316d432a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:36</sys_created_on>
+        <sys_id>00d8481947d066109bc0ee2f316d437d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 04:56:36</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>subject</element>
+        <help/>
+        <hint/>
+        <label>Subject</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_88d8481947d066109bc0ee2f316d432a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:36</sys_created_on>
+        <sys_id>40d8481947d066109bc0ee2f316d4376</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 04:56:36</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>user</element>
+        <help/>
+        <hint/>
+        <label>User</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_88d8481947d066109bc0ee2f316d432a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:36</sys_created_on>
+        <sys_id>40d8481947d066109bc0ee2f316d4384</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 04:56:36</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>target_table_name</element>
+        <help/>
+        <hint/>
+        <label>Target Table</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_88d8481947d066109bc0ee2f316d432a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:36</sys_created_on>
+        <sys_id>4cd8481947d066109bc0ee2f316d4349</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 04:56:36</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>target_record</element>
+        <help/>
+        <hint/>
+        <label>Target Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_88d8481947d066109bc0ee2f316d432a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:36</sys_created_on>
+        <sys_id>94d8481947d066109bc0ee2f316d4392</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 04:56:36</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>from_address</element>
+        <help/>
+        <hint/>
+        <label>From address</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_88d8481947d066109bc0ee2f316d432a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:36</sys_created_on>
+        <sys_id>c0d8481947d066109bc0ee2f316d438b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 04:56:36</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_88d8481947d066109bc0ee2f316d432a"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_88d8481947d066109bc0ee2f316d432a"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>f0b4bf8d475066109bc0ee2f316d433c</sys_id>
+        <latest_snapshot>88d8481947d066109bc0ee2f316d432a</latest_snapshot>
+        <compiler_build/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=f0b4bf8d475066109bc0ee2f316d433c^sys_idNOT IN10d8481947d066109bc0ee2f316d43bc"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan/>
+        <plan_id>f0b4bf8d475066109bc0ee2f316d433c</plan_id>
+        <snapshot>88d8481947d066109bc0ee2f316d432a</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 04:56:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>10d8481947d066109bc0ee2f316d43bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 04:56:37</sys_updated_on>
+        <trigger display_value="">d4d8481947d066109bc0ee2f316d43bb</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=f0b4bf8d475066109bc0ee2f316d433c"/>
+</record_update>

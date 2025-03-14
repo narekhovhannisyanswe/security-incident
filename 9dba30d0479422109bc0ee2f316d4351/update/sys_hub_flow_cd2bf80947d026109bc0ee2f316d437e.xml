@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=44695000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Set the duplicate incident as the parent if the caller and description match.</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>handle_duplicate_security_incidents</internal_name>
+        <label_cache>[{"name":"Created_1.current.parent","label":"Trigger - Record Created➛Security Incident Record➛Parent","reference":"x_1615099_security_incident","reference_display":"Security Incident","type":"reference","base_type":"reference","parent_table_name":"x_1615099_security_incident","column_name":"parent","usedInstances":{"fbb3bf0a-c771-4bc1-a48f-5531360e6bf6":["condition"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Security Incident Record","reference":"x_1615099_security_incident","reference_display":"Security Incident","type":"reference","base_type":"reference","usedInstances":{"93d25ad0-9f0d-4cf0-ad73-8409eb044534":["record"]},"attributes":{}},{"name":"Created_1.current.sys_id","label":"Trigger - Record Created➛Security Incident Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_1615099_security_incident","column_name":"sys_id","usedInstances":{"d2454741-9bf8-4fc4-9f5e-73ef9a176cd7":["conditions"]}},{"name":"d2454741-9bf8-4fc4-9f5e-73ef9a176cd7.Record","label":"2 - Look Up Record➛Security Incident Record","reference":"x_1615099_security_incident","reference_display":"Security Incident","type":"reference","base_type":"reference","usedInstances":{"692ddb15-53f6-4cba-8036-b3b619cf58da":["condition"],"93d25ad0-9f0d-4cf0-ad73-8409eb044534":["parent"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.description","label":"Trigger - Record Created➛Security Incident Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"x_1615099_security_incident","column_name":"description","usedInstances":{"d2454741-9bf8-4fc4-9f5e-73ef9a176cd7":["conditions"]}},{"name":"Created_1.current.caller","label":"Trigger - Record Created➛Security Incident Record➛Caller","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1615099_security_incident","column_name":"caller","usedInstances":{"d2454741-9bf8-4fc4-9f5e-73ef9a176cd7":["conditions"]}}]</label_cache>
+        <master_snapshot>2aaef08d47d026109bc0ee2f316d4397</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Handle Duplicate Security Incidents</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>3cd21509475426109bc0ee2f316d438f</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-13 13:58:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cd2bf80947d026109bc0ee2f316d437e</sys_id>
+        <sys_mod_count>33</sys_mod_count>
+        <sys_name>Handle Duplicate Security Incidents</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name>sys_hub_flow_cd2bf80947d026109bc0ee2f316d437e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 02:22:57</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=cd2bf80947d026109bc0ee2f316d437e"/>
+    <sys_variable_value action="delete_multiple" query="document_key=cd2bf80947d026109bc0ee2f316d437e"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_1615099_security_incident">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-13 15:41:28</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3cd21509475426109bc0ee2f316d438f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-13 15:41:28</sys_updated_on>
+        <table>x_1615099_security_incident</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>cd2bf80947d026109bc0ee2f316d437e</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 02:22:56</sys_created_on>
+        <sys_id>91a5ab0d471066109bc0ee2f316d4337</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 02:22:56</sys_updated_on>
+        <trigger display_value="">3cd21509475426109bc0ee2f316d438f</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=cd2bf80947d026109bc0ee2f316d437e^sys_idNOT IN91a5ab0d471066109bc0ee2f316d4337"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=cd2bf80947d026109bc0ee2f316d437e"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=cd2bf80947d026109bc0ee2f316d437e^sys_idNOT IN092bf80947d026109bc0ee2f316d4381"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>cd2bf80947d026109bc0ee2f316d437e</id>
+        <name>Handle Duplicate Security Incidents</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-13 13:58:00</sys_created_on>
+        <sys_id>092bf80947d026109bc0ee2f316d4381</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-13 13:58:00</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=092bf80947d026109bc0ee2f316d4381"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=cd2bf80947d026109bc0ee2f316d437e^sys_idNOT IN08aeb08d47d026109bc0ee2f316d4355,fb9eb08d47d026109bc0ee2f316d434d"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Handle Duplicate Security Incidents">cd2bf80947d026109bc0ee2f316d437e</model>
+        <model_id>cd2bf80947d026109bc0ee2f316d437e</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_cd2bf80947d026109bc0ee2f316d437e</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-13 14:13:13</sys_created_on>
+        <sys_id>08aeb08d47d026109bc0ee2f316d4355</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-13 14:13:13</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=08aeb08d47d026109bc0ee2f316d4355"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Handle Duplicate Security Incidents">cd2bf80947d026109bc0ee2f316d437e</model>
+        <model_id>cd2bf80947d026109bc0ee2f316d437e</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_cd2bf80947d026109bc0ee2f316d437e</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-13 14:13:13</sys_created_on>
+        <sys_id>fb9eb08d47d026109bc0ee2f316d434d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-13 14:13:13</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=fb9eb08d47d026109bc0ee2f316d434d"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=cd2bf80947d026109bc0ee2f316d437e"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=cd2bf80947d026109bc0ee2f316d437e"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=cd2bf80947d026109bc0ee2f316d437e^sys_idNOT IN0caeb08d47d026109bc0ee2f316d4387"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment>This flow is triggered whenever a new Security Incident record is created.</comment>
+        <display_text/>
+        <flow display_value="Handle Duplicate Security Incidents">cd2bf80947d026109bc0ee2f316d437e</flow>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-13 14:13:13</sys_created_on>
+        <sys_id>0caeb08d47d026109bc0ee2f316d4387</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-13 15:41:22</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPXcAFdPElyttukkUDbDeo7W0fglSgRNImSlOuRCnxLvLvHepmWRfHjpWt8xLAJM05c3zmzDD3P3SOPML1S32OPE70gc6EJKFAfL5ZE1iWatkVaKX2VkhgJINwo1/KMCYDnYbBak5Wa44kHKaIR7AYhJiE+qU50BPEYzLbRLcYboLvp9fkd+r5Nnx+cs2xOTIcx42IH4dMblwmfIaJkHAKswju3/yZH57lR7Tb7RF/yTgOidAv7x8G+hqFEEcqDD9qW0wB8amPHIsYvm3almUY1sXQ9Ma2Z1rYRsQw4MI6KTXgsoWbbdbkSRKBCS4JadAWEoTvBN+UJ5bAekbRCj1F7DvcfmGoc5QAdp9ke+VHN+ckW/aXAfPJ3VqyQGQrGc5sM+DxSnzN8Cs2CUUxlwWbsBJHcB9ZK8gKRI6IzpbB47QI+JmJNLt8kwc+4uUnJGXIvFiSSBFOGQfq3YybKIjDFP305upueu3+9XF+9dvN1J3ezObT26v5zbX+nObl/hurGzOEORY3S+e5lMBnRrj6AUW88gDNQI/8kK3lR1+ypJDf82Ar6atAYJay0pC1X2xFu7Iust+na8PoVLZfiVio+++bP5oqzhaP0+14jBAmqEO3Hq3otpp5CzTZQkI1u30KzlcOkfDQMP4nEefu9FoNrwJM+PX2Oh02FwtQNRPrWCq2HpGQkSsDF2HsVnhURwHTS6LOcmsq+2VNh7GAK9zyF2oqOyWyZPQLiyCBe6jLgq30StinX/Irp7HQAvgp4Y8G3gpkSa1wOnq7QoucYzojnPiyIgv6Lap++p1FEROLCuoyaMpKI2YZDuSlFSllsaMTgz/0WdZN0pMambXyPrq2TZNSj1DLmKjKNg3bo6YxMUaIYtswfKtS200wnShlTRJvUuPHVXiUipEfIL06xTl4o1oNB8ko2dVgQYKSSG4kV/1AM3uCZiloNUO0j3LEUpbZ8vWuOvel1vM0gHCC4Bv4UGNUBw5wQMqDRzDjV7ifh/x/FmEQC1y3I3WnxoS2PaH9kvP3oUcnpEFI9gPYPXFOHrilvRAuEpse3M+mpueQITHA9GzwO2/kOJ6PLEon4wmxzJr7bWG0YnsXrveC2pI2uXY5YKtwkja9HeF9JwBs+ODRAE93wFyYrf6X7b0Pp3tcEuEC1NDlyssahrfg8Agu9vqt9kboZFvfp1Y8vXD8kTmZ+BN4x0DF0yHxkDm0RsiZjO2LUa3iG1D2wZQtzPyU1020iVIgHW7wLds6r+f6W8o2IlKqdnR8lxYwx6bfQVmQSqdUP4uWmkoQal8D8evt9pw2I9AA0yduX+36EBTqh9XeFoYXyGVjXoDQn2B9J7SaMztYObsnVU0kyW6uJz+pyPBi5FC73WKo02YxWzDdMM9+vDiwQpLOWmubMw4VfNJaN52DwSskXJNJdWLYM9L0RYrZOynW25FinzxGFbXY+Y58Ddh31MLSueKUPqZiEjegVfO+DjTY0CCIxqiW/2+RYM3baHJJgFIO8zIE1FT0U1272kWaUEoF/1wg2QTe6GawrOUD1Pk1qpoU+n0BEzxBo5HdMQ879RdwG6AX8J592zq6KpK2Itvbu467t35na/eqSHZXEQf2pV6zbm9Op2Xd2p5eyvr0xrPv/d6C4kxbysN/QLqrOmEfAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=cd2bf80947d026109bc0ee2f316d437e^sys_idNOT IN0caeb08d47d026109bc0ee2f316d4389,48aeb08d47d026109bc0ee2f316d438d"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment>Lookup duplicates.</comment>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Handle Duplicate Security Incidents">cd2bf80947d026109bc0ee2f316d437e</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>fbb3bf0a-c771-4bc1-a48f-5531360e6bf6</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-13 14:13:13</sys_created_on>
+        <sys_id>0caeb08d47d026109bc0ee2f316d4389</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 02:22:48</sys_updated_on>
+        <ui_id>d2454741-9bf8-4fc4-9f5e-73ef9a176cd7</ui_id>
+        <values>H4sIAAAAAAAA/9VYbW/jNgz+K54/p5mdNyf9NrQLUGB3Ha7dAUPXCbIkN8IUySfJbdMg/32UZSdp3pvmcL2PokjxIfmQkn03DTkNz0M6iAbZYNDtJ1HUbkdRr9cmOE7Tdo+kUYo7YSOUeMxA0+JUMFg+YlG49TOKe3E3GgyQYaTQ3E4Ql4RTJi1oUW5ygSdfK+WbSiW4WqiQERdUMxme3903whxr8GOZDs+nK1t2kjMkcMoEnHTrYASfHabGwSG8Ml4PyTmol0j6o5WmDkvUCNmzZZIycJVhYVgjHGNJsVV6Mpdohum1FAvBiEOI52HolJ8Nf4Hj+5HTyxiERZjfmy9RlS4vJiPFCbvOLVfSSzxQv6lEMZaffQAu0SzDhbB1okFSGDiP5Q6zA1Ehym5G6ulL7XDIZRletSkUwWK+wtZqnhaWGVcLJtgYDkJjnOdcPqBcq0deGgOWcfNBwKKZCfUETg1/kE1MHPAmpAg3hyC/LMVfseYuik9wDBgDIC6g2sgn3ahCl1l5REQUptzQWBp/Vjgrc4W+FQ6lj7qKD/kUgYIhmuf2NzB4ZFUos0bN8u5OigwWlCBKUu58miWqQ3IE0/8UYEyn0wuotmUUxU3gNGTTNv3+bPYvZKBEAfbbtZeUwMRMDOL0l+3qXgE0oUNgfXXz+6c/b/9eb7GPCfK4Jr9YrsKhFdxovKmsVbu/klXtHp+s3TtR9IMa3uri4/X7vg72Ae9p45juJAFd1NsobZHP3FIfO5aSirtKrrfQ2v5x7B1yJuirK+oA4LXxtSNikE62xVKRN3M+Vu6q1k9/V31I6gIginy+uRRclk8FAHoaTnd3UiONV3hQln+J0U6GDVnnMg6sCl6On8BlXWv+HgCyNrwBRMGtR7kBeD176+Mr6rZPRt12623UBeLcTefo51nbkOD6RehKV+u/OH28qu8uz6U7ZXY/p/7FcT7jt/psOZ8rvdl+U3MuM8vvXG4h2Infm1uarfE9u3sEppU/5JsVPXH6wOzCe61FlX3C4r9N+xW75j1Uhvfut2u88/MmXXq78gyNoU48hwe1ZgSoYBA8x1CmCklR9ZRe0MbVLePa2Ep5fYZ8YbbQMlDQcoEdsaDUDubap5gsB0RXG15lQR1ehcEEEF5QhhfMw3tbMrbMo84J34HvmUdDzEWZevgkypdqx7RWestM2lO1HeU/cGAdCCo+Kaj3T7RNfN842fZg/Sm+r987dQjDaaeFe0k7jqMojmgS9ZMk7vfSrIeTTrZoNISMJDAW4eQMiAHHo5oIdVXj9dFSTc0j/wGB8a/Dcro2DoZbG1/6z95WYgOHF8oc1Hj3R1SNi1QpwbBcsLP7w+bFR/lNVPDb1dx40R+biva97vKC/yX5t4JdOVL0WdTqx5Sc9ZM4OetktHc2oLh7hgdpN2lTRjrZ8dfz/f9/Xa8aQhUAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Set the duplicate record as the parent.</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Handle Duplicate Security Incidents">cd2bf80947d026109bc0ee2f316d437e</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>692ddb15-53f6-4cba-8036-b3b619cf58da</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-13 14:13:13</sys_created_on>
+        <sys_id>48aeb08d47d026109bc0ee2f316d438d</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 02:22:48</sys_updated_on>
+        <ui_id>93d25ad0-9f0d-4cf0-ad73-8409eb044534</ui_id>
+        <values>H4sIAAAAAAAA/+1Uy27bMBD8FUNnWRAt+SHfihoGcmgCJEUuaSBQ5MomQD1KUY5dwf/epUTZzqOpkRooClS3XS5nZ5ajfWgcwZ25EwL3SUQmLCBBMPL90SwkySRIyIgHFIA4rpPTDLBSASsUx3hDZW0STfNZAdXAY+KxWinI9X6P51xUpaS7e1uGGbYWkuO5M394dJ2SKkTUoJx58+JI70qIJU1A4sVFweoMQQdXC8Q4l21/+7an+5K+6YExt+ixMEk8MnyI7zqw1ZBzwHYplRW4TkZzTnWhds5cqxoTqJrf5HJ3qFiLXHdKM7qtxA/ED31TlwJKY3YKhzC2E+qHUwgGN6UWRd5lNE1kP7lC1ll+3Ukws4WU1lKfzLauEA9KQ9mQ6Bimd+vi6bbvtxR5q86ylQWj8hBRrZVIag2VeQ6Q0A4lo2Up8lVcqmIj2stIJfNWEgMvlcUT9qzEKvcoM7w9HBD1lphftOl7qoQR8QVh8PK+FR9/r03fToYlHLeaW8Fx+1BYWjElSv0JgTdgae5da9dk/J4BWHR87xPMo2W3MZmQsR9FcQVoWaF3sciZaEf3yrh3tmRwdSz5mJO/Gi6D647LuTqeXf6FLuvlZzlr5fHFrDz7S1a2jP4xL//Owf7o3RV28tKtaasT96LdsM232vcD3jR8FI7DaUiGUZLOhmHKwmGUjmE4DSCNKJlOGJ963RZ8ay3/GdgH/wPIkIKGQUfCPXsiPcBSgOTVGyPqfwTbIN7YBoe9frG/gUz89vu/3i+43h9/AtgFbzWPCAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=cd2bf80947d026109bc0ee2f316d437e"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=cd2bf80947d026109bc0ee2f316d437e^sys_idNOT IN8caeb08d47d026109bc0ee2f316d438b,d9a899cd475426109bc0ee2f316d430c"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">00aeb08d47d026109bc0ee2f316d438b</block>
+        <comment>Checks if the previous "Look Up Records" action found any matching duplicates.</comment>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Handle Duplicate Security Incidents">cd2bf80947d026109bc0ee2f316d437e</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id>fbb3bf0a-c771-4bc1-a48f-5531360e6bf6</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-13 14:13:13</sys_created_on>
+        <sys_id>8caeb08d47d026109bc0ee2f316d438b</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 02:22:55</sys_updated_on>
+        <ui_id>692ddb15-53f6-4cba-8036-b3b619cf58da</ui_id>
+        <values>H4sIAAAAAAAA/+1UXWvbMBT9K8XPifFn0uSttCsU1mY0oVBGMbJ0lYjKkmfJSbOQ/74rf6RhTdjY9rg333O/zrk6eOfp2pa1NQt9ZYxYKm/69WXgCeUw/N55ihTgTT2qFRNWaJU1wMBbE1m7xPUK6OvFTV1KQYkFgykmTCnJ9ul8BV0JySrotpWkwpkWKm+6+ylltyVkkuQgcdDcVkItsV0wjHhAeDihIY2jURwFQXSZhPkozsOIxQRIjHV943VP/uJzgwzOqnL7EDf9Jl0xRysMBh68WVAMcDUn0sDAK4hixOpqe0AqIGym5DuwEsriOM8VvxnxHWdHaeoKOaBGCm3yEGbd6VqYrrSgMCsdwRaxJJddD9WyLtRDq8MdHTippe2PjkhtcB6UjrRj0VHi85XePPYLb4VqBHZJqSmRh4hYPENeuyfDhwEJBQ7KClKWeJysrPRaNM3IpfCXEgOfS73Bpc5JPqGOuI83Iv4t4jcN/EQq4VTc4xhsbmnmxAiaNa7DcbZCCfvmLNm32hFqBXZSsvYaWGBoJUp7hXvW0LHeDz5a9situx2LkjQZJ+FwkvPLYcJpMpzwFIbjGPiEhOMRZWP/ESi+/H5/N3+YLT7df1k8f7T134z6F/6fkJSnYZCe9n8yOuX/E84/b/roF6Z3z/Sbng+C4L/pj00vTNaat9PWLP9jz784g7cbTOsbBlQYJLJw2F3/N3eJLRpA0GNoo6tXJ+Ed2/8AA3S4xRcGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">d1a899cd475426109bc0ee2f316d430c</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Handle Duplicate Security Incidents">cd2bf80947d026109bc0ee2f316d437e</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-13 16:06:54</sys_created_on>
+        <sys_id>d9a899cd475426109bc0ee2f316d430c</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 02:22:54</sys_updated_on>
+        <ui_id>fbb3bf0a-c771-4bc1-a48f-5531360e6bf6</ui_id>
+        <values>H4sIAAAAAAAA/+2UXWvbMBSG/0rwtTG204Q1dyVboLCuZQmFMYo5lo5jUVnyJDlpFvLfd+SPNLTpVsYudxe95+s9xw/ZB7pxdePsSl9ZK9YqmH1/CAOhvEa/94GCCoNZwLTiwgmtslYIgw3IxgfmJbLH0R0YVG60ECg5BbmwtYTd/e9yWCkkJ6WbWIOhvg5NMNu/CLldjZmEHCW1Wjoj1JrKBadXEUORXLKEjdPpOI3j9MNFkk/HeZLyMSCMKW8onA8LjD63SvjmZn4e6XaYpA33tpI4DPDJoeJIowuQFsOgAsXBabM7KgaB3yr5LJRCOWoX+OQnK35S73Qy8YkF0o4Mu+DxmfXH62RWasHwtvYGO8VBLvsapmVTqS/dHv7sWEAj3XB2UhpL/bD2pr2L3lKxLPX26zBwIVS7YB+UmoE8vsDRGfLGofUfBiVW1CiroK7pOFlt9Ea0xeSlitaSHlEh9ZaGepoiYN54RDeCaEH6x1a+ByP8FjfUhoo7mzlYwbKWPGrnDK1waM+S/Wi8oW7BfpWsuwYlWGZE7a5ozgZ714fwNbYnxO73c/pIDnmWRKwxHsqobtk8HK6Xn27uVt9eI/y+on/B9CVMikkST84zfTE9x/QZmt8GOf0DyP707+Q4juP/IJ+CLGzWAdnv1g7/a44fPLTdBNtxw5EJS0ZWXrse/qV9YEcACHYqbbV59Cs8a4dfpXHouu8FAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=cd2bf80947d026109bc0ee2f316d437e"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=cd2bf80947d026109bc0ee2f316d437e"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_cd2bf80947d026109bc0ee2f316d437e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-13 14:13:13</sys_created_on>
+        <sys_id>0caeb08d47d026109bc0ee2f316d4357</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-13 14:13:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_cd2bf80947d026109bc0ee2f316d437e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-13 14:13:13</sys_created_on>
+        <sys_id>80aeb08d47d026109bc0ee2f316d4354</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-13 14:13:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_cd2bf80947d026109bc0ee2f316d437e"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_cd2bf80947d026109bc0ee2f316d437e"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Set the duplicate incident as the parent if the caller and description match.</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>handle_duplicate_security_incidents</internal_name>
+        <label_cache>[{"name":"Created_1.current.parent","label":"Trigger - Record Created➛Security Incident Record➛Parent","reference":"x_1615099_security_incident","reference_display":"Security Incident","type":"reference","base_type":"reference","parent_table_name":"x_1615099_security_incident","column_name":"parent","usedInstances":{"fbb3bf0a-c771-4bc1-a48f-5531360e6bf6":["condition"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Security Incident Record","reference":"x_1615099_security_incident","reference_display":"Security Incident","type":"reference","base_type":"reference","usedInstances":{"93d25ad0-9f0d-4cf0-ad73-8409eb044534":["record"]},"attributes":{}},{"name":"Created_1.current.sys_id","label":"Trigger - Record Created➛Security Incident Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_1615099_security_incident","column_name":"sys_id","usedInstances":{"d2454741-9bf8-4fc4-9f5e-73ef9a176cd7":["conditions"]}},{"name":"d2454741-9bf8-4fc4-9f5e-73ef9a176cd7.Record","label":"2 - Look Up Record➛Security Incident Record","reference":"x_1615099_security_incident","reference_display":"Security Incident","type":"reference","base_type":"reference","usedInstances":{"692ddb15-53f6-4cba-8036-b3b619cf58da":["condition"],"93d25ad0-9f0d-4cf0-ad73-8409eb044534":["parent"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.description","label":"Trigger - Record Created➛Security Incident Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"x_1615099_security_incident","column_name":"description","usedInstances":{"d2454741-9bf8-4fc4-9f5e-73ef9a176cd7":["conditions"]}},{"name":"Created_1.current.caller","label":"Trigger - Record Created➛Security Incident Record➛Caller","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1615099_security_incident","column_name":"caller","usedInstances":{"d2454741-9bf8-4fc4-9f5e-73ef9a176cd7":["conditions"]}}]</label_cache>
+        <master>true</master>
+        <name>Handle Duplicate Security Incidents</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Handle Duplicate Security Incidents">cd2bf80947d026109bc0ee2f316d437e</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-13 14:13:24</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2aaef08d47d026109bc0ee2f316d4397</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 02:22:56</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=2aaef08d47d026109bc0ee2f316d4397"/>
+    <sys_variable_value action="delete_multiple" query="document_key=2aaef08d47d026109bc0ee2f316d4397"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=2aaef08d47d026109bc0ee2f316d4397"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=2aaef08d47d026109bc0ee2f316d4397^sys_idNOT IN6eaef08d47d026109bc0ee2f316d4398"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>2aaef08d47d026109bc0ee2f316d4397</id>
+        <name>Handle Duplicate Security Incidents</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-13 14:13:24</sys_created_on>
+        <sys_id>6eaef08d47d026109bc0ee2f316d4398</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-13 14:13:24</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=6eaef08d47d026109bc0ee2f316d4398"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=2aaef08d47d026109bc0ee2f316d4397^sys_idNOT INbeaef08d47d026109bc0ee2f316d4399,f2aef08d47d026109bc0ee2f316d43a6"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Handle Duplicate Security Incidents">2aaef08d47d026109bc0ee2f316d4397</model>
+        <model_id>2aaef08d47d026109bc0ee2f316d4397</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_2aaef08d47d026109bc0ee2f316d4397</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-13 14:13:24</sys_created_on>
+        <sys_id>beaef08d47d026109bc0ee2f316d4399</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 02:22:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=beaef08d47d026109bc0ee2f316d4399"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Handle Duplicate Security Incidents">2aaef08d47d026109bc0ee2f316d4397</model>
+        <model_id>2aaef08d47d026109bc0ee2f316d4397</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_2aaef08d47d026109bc0ee2f316d4397</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-13 14:13:24</sys_created_on>
+        <sys_id>f2aef08d47d026109bc0ee2f316d43a6</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 02:22:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f2aef08d47d026109bc0ee2f316d43a6"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=2aaef08d47d026109bc0ee2f316d4397"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2aaef08d47d026109bc0ee2f316d4397"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=2aaef08d47d026109bc0ee2f316d4397^sys_idNOT IN7aaef08d47d026109bc0ee2f316d43b4"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment>This flow is triggered whenever a new Security Incident record is created.</comment>
+        <display_text/>
+        <flow display_value="Handle Duplicate Security Incidents">2aaef08d47d026109bc0ee2f316d4397</flow>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-13 14:13:25</sys_created_on>
+        <sys_id>7aaef08d47d026109bc0ee2f316d43b4</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-13 15:41:27</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPXcAFdPElyttukkUDbDeo7W0fglSgRNImSlOuRCnxLvLvHepmWRfHjpWt8xLAJM05c3zmzDD3P3SOPML1S32OPE70gc6EJKFAfL5ZE1iWatkVaKX2VkhgJINwo1/KMCYDnYbBak5Wa44kHKaIR7AYhJiE+qU50BPEYzLbRLcYboLvp9fkd+r5Nnx+cs2xOTIcx42IH4dMblwmfIaJkHAKswju3/yZH57lR7Tb7RF/yTgOidAv7x8G+hqFEEcqDD9qW0wB8amPHIsYvm3almUY1sXQ9Ma2Z1rYRsQw4MI6KTXgsoWbbdbkSRKBCS4JadAWEoTvBN+UJ5bAekbRCj1F7DvcfmGoc5QAdp9ke+VHN+ckW/aXAfPJ3VqyQGQrGc5sM+DxSnzN8Cs2CUUxlwWbsBJHcB9ZK8gKRI6IzpbB47QI+JmJNLt8kwc+4uUnJGXIvFiSSBFOGQfq3YybKIjDFP305upueu3+9XF+9dvN1J3ezObT26v5zbX+nObl/hurGzOEORY3S+e5lMBnRrj6AUW88gDNQI/8kK3lR1+ypJDf82Ar6atAYJay0pC1X2xFu7Iust+na8PoVLZfiVio+++bP5oqzhaP0+14jBAmqEO3Hq3otpp5CzTZQkI1u30KzlcOkfDQMP4nEefu9FoNrwJM+PX2Oh02FwtQNRPrWCq2HpGQkSsDF2HsVnhURwHTS6LOcmsq+2VNh7GAK9zyF2oqOyWyZPQLiyCBe6jLgq30StinX/Irp7HQAvgp4Y8G3gpkSa1wOnq7QoucYzojnPiyIgv6Lap++p1FEROLCuoyaMpKI2YZDuSlFSllsaMTgz/0WdZN0pMambXyPrq2TZNSj1DLmKjKNg3bo6YxMUaIYtswfKtS200wnShlTRJvUuPHVXiUipEfIL06xTl4o1oNB8ko2dVgQYKSSG4kV/1AM3uCZiloNUO0j3LEUpbZ8vWuOvel1vM0gHCC4Bv4UGNUBw5wQMqDRzDjV7ifh/x/FmEQC1y3I3WnxoS2PaH9kvP3oUcnpEFI9gPYPXFOHrilvRAuEpse3M+mpueQITHA9GzwO2/kOJ6PLEon4wmxzJr7bWG0YnsXrveC2pI2uXY5YKtwkja9HeF9JwBs+ODRAE93wFyYrf6X7b0Pp3tcEuEC1NDlyssahrfg8Agu9vqt9kboZFvfp1Y8vXD8kTmZ+BN4x0DF0yHxkDm0RsiZjO2LUa3iG1D2wZQtzPyU1020iVIgHW7wLds6r+f6W8o2IlKqdnR8lxYwx6bfQVmQSqdUP4uWmkoQal8D8evt9pw2I9AA0yduX+36EBTqh9XeFoYXyGVjXoDQn2B9J7SaMztYObsnVU0kyW6uJz+pyPBi5FC73WKo02YxWzDdMM9+vDiwQpLOWmubMw4VfNJaN52DwSskXJNJdWLYM9L0RYrZOynW25FinzxGFbXY+Y58Ddh31MLSueKUPqZiEjegVfO+DjTY0CCIxqiW/2+RYM3baHJJgFIO8zIE1FT0U1272kWaUEoF/1wg2QTe6GawrOUD1Pk1qpoU+n0BEzxBo5HdMQ879RdwG6AX8J592zq6KpK2Itvbu467t35na/eqSHZXEQf2pV6zbm9Op2Xd2p5eyvr0xrPv/d6C4kxbysN/QLqrOmEfAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=2aaef08d47d026109bc0ee2f316d4397^sys_idNOT IN36aef08d47d026109bc0ee2f316d43b3,f2aef08d47d026109bc0ee2f316d43b4"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment>Lookup duplicates.</comment>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Handle Duplicate Security Incidents">2aaef08d47d026109bc0ee2f316d4397</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>fbb3bf0a-c771-4bc1-a48f-5531360e6bf6</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-13 14:13:25</sys_created_on>
+        <sys_id>36aef08d47d026109bc0ee2f316d43b3</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 02:22:56</sys_updated_on>
+        <ui_id>d2454741-9bf8-4fc4-9f5e-73ef9a176cd7</ui_id>
+        <values>H4sIAAAAAAAA/+VYW2/bNhT+K5qeHU/y3XkrkgUI0DZD4xYYuo6gSComRlMqSSVxDP/3HYqULfgu1AES7JGHh+R3Lt9HSt8XIafhZUjH0Tgdj/ujYRR1u1E0GHQJjpOkOyBJlOBe2AolnjHwNDgRDIaPWBR2/IziQdyPxmOkGSkUN3PEJeGUSQNelOtc4Pk373zvXYLbtQuZckEVk+Hl9x+tMMcKzjFMhZeLjalTgQqcMAGuE490A7iZ56shKuec7WN9WfDZTWSKWihRK2TPhknKAEOKhWatcIYlxSZT85VFMUzvpFgbphwivAxD6/ys+QucO4qsX8ogKsLc3GqIfLacOb3GBt8bVRBTKO9KphknTLt8UJbiQpirus053OWGZ9ItcWG71ZkoZvKzS0e42qAqDlgKDSBYbgO1yH0Y6f00e/pSobzhssyJnxQZwWI1wsYonhTG4lmETLAZbIRmOM+5fEC5yh55uRiwzNoPAgbtVGRPcKjmD7KNiQXehrzi9g3Yr0vzN6y4jeITbAOLARAX0CHIlVBnhSpT+YiIKHQ5obDUbq9w2Qr1XF8JrPU6ckg5+llY3C4PPmLkkmaXEMVz8wG2eGQ+uGWr4kr/YAuO1y1HMkm5RaFrhIF0Cab+LmAxXSyuoGkMoyhuAzMgv6bt5pfLfyAnJQpYv9+75gRLIFLE6W/73Z0DeALPYHx7/8enPyd/bRP1bYJsKBXH61RJxVW9ULuK50Vjy/Zx1wZeNOKziUYvit6TbMDhb081muuAS8ERMYjpwSaj637SmTLI5bKmBrbXiWdAJreJuDXfjAMnwKs4cGe7Nkjm+xB7CqScCbrr3ryxExv3Zuf/eW++SQIAIIpc9bgUXJaPIAD6WszoH2y9JN7os7K9arywNqzJNiNwYLLgpTETToBTMeEezg4mDs8OiNVdULbM5j1QGT0BumcjQLdzHgIsVmGuErkj59W711az8n+x/njT397ttTtvuYtgjc6Mm57ZWW4TuNuIwfVmczPXe3ruzA/kPYxsvaYETGGpPw85/qInTh+YWZ9eedHMPGHx765533GoKlQZ3is8tuOD33tJ7bHNUzSDyvEcvgkUI9AcGsH7EaVZISnyXwPrRrKVTLnSxjtvC80XBvyRQQbEDMyUBaV3sPJueBEfj6NK5W0aVIH403QAgQRlIMEqkGZhNxGt3hkfrucWrRvMRVkN+NDLa+VkSmVqj3AdKeSBjjhR1U4EFZ8V1K/L3i4K7JS/I1jfxV+D80sTYTjpdfBg2I3jKIojOoxGw2E8GiTpAA976ZqjCGlJQE1h5xRaBbZHVWtUdY639ceLbTOdOQFU1YHX7pO9MzSBRQXlDSpUx3F7PUmyTDAsNwRlAsh/vylvhFW79t+cqLyLX2gFn2xm2pl25vq1ng0F/yr5z4Ld2hYbsagziim5GA3j4UUvpYOLMcX9CzxO+sMuZaSXnvMl8OM/EZcPWKQWAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Set the duplicate record as the parent.</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Handle Duplicate Security Incidents">2aaef08d47d026109bc0ee2f316d4397</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>692ddb15-53f6-4cba-8036-b3b619cf58da</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-13 14:13:25</sys_created_on>
+        <sys_id>f2aef08d47d026109bc0ee2f316d43b4</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-13 16:07:00</sys_updated_on>
+        <ui_id>93d25ad0-9f0d-4cf0-ad73-8409eb044534</ui_id>
+        <values>H4sIAAAAAAAA/+VVy2rjMBT9laB1YqzYeTi7oSFQ6LTQDNl0ipGl60YgP0aS22RM/n2ubTkJbem0TDdlstN96ZyTe6y7mkhBFiQE4dOITnlAg2Ds++N5SJNpkNCxCBgAJUOSswywUgMvtMDzI1NVE6jrCw3MgoipxyutIbeHA+aFNKVi+40rwwjfSiUwTxZ390NSMo0TLWiyqJ+l3gtJsQQUlt72mJ5jtPuyOYuCVxniimUfvHKdS5cZXC4xg00NHOoPCews5AIQSMqUgSHJWC6YLfSeLKyuMICkxU2u9seKrcxtRzRjOyN/482h39SlgMy4E+F4jJ1AXThdMsvWOJnbSh/1KiQH02kiIGWVshfnsa7gprSyyLsWyxLVdxeqyvLrThFyHHD2f1QGQUDZ8GyQd7TS9bZ4uu1BrmTeSuIoqoIzdTwxa7VMKtvAqQkoaDXOWFnK/CEudfEo22aEknkPCg9eqoonvNPIh9xjvMHtoarMW2F82YY3TMuGxHccg82HITF7c6GYMScqqGH8q2qQdMQchbhVoZUgbjehaeZalvYbXvUIDvhh6JY+mby1YTw6LdTZzNPi72I6pRM/imIDuPjS7mOZc9mK+WL9165kcHkq+Zgf3oG298OPdgteR+8s8SJ2dd47uO4SzhCTTzPE/CsZwtH48o74mw/88Ztf2rNNalffnHkAlxav+Vn5fiDqWozDSTgL6ShK0vkoTHk4itIJjGYBpBGjsykXM6/7WL/2RPzbsI+56R2cezetJChhXhGhtxJkyMJC3InyzE4uOdi45PGN+TRP0anf/r6Qs/6bp+b+D2jCT/xhCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=2aaef08d47d026109bc0ee2f316d4397"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=2aaef08d47d026109bc0ee2f316d4397^sys_idNOT IN7eaef08d47d026109bc0ee2f316d43b1,aaa899cd475426109bc0ee2f316d43df"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">00aeb08d47d026109bc0ee2f316d438b</block>
+        <comment>Checks if the previous "Look Up Records" action found any matching duplicates.</comment>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Handle Duplicate Security Incidents">2aaef08d47d026109bc0ee2f316d4397</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id>fbb3bf0a-c771-4bc1-a48f-5531360e6bf6</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-13 14:13:25</sys_created_on>
+        <sys_id>7eaef08d47d026109bc0ee2f316d43b1</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 02:22:56</sys_updated_on>
+        <ui_id>692ddb15-53f6-4cba-8036-b3b619cf58da</ui_id>
+        <values>H4sIAAAAAAAA/+1V22rjMBD9laJnx/iaNHkryRYKbbM0obAsxYxlKRGVLa8lJ82G/PuOfEnCtmW3dB/3zTozmjlzNAfviapNWRu9VFdai1VBJt+fHCIKi+H3nhSQMzIhVBWZMEIVSQM4ZAOytoHpmtHni1ldSkHBMI2hTOhSwu7x/Qy6FjKrWNethAprGlaRyf63kMiwAPeA+2Pq0zAYhoHnBZeRnw7D1A+yEBiEWFBCyqTt1dO8uG0Q513+ZldaXJtKFKvufNtVWfSgqjLLyvccwl4MKzKGfDhIzRySQ5GBUdXuiFQMsnkhT8BaFAbLEZv8osVPbBjEsU3kDEekrA0ej0mnXAvzGRhAKjU1ddWl0rUSlOlWnIxxqKWZnmNtwry0o7ZXDKSyv61knRf3rSLkWKB/KERqjSRYaSe11Ls5+GKttg89y2tRNKp0QakoyOMJDGqX1vaZ8TGZZDkWSnIoS1Q0KSu1Ec1l5JK7K4kHl0u1xaZ2+1yglriLwoJ7jfisgR+hEnaKOyyDl1uaKWhBk2ZTsRzKxMjBIXqnpxK0Pg2J6iY/akuxHbkbLmn1sVdoJUpzhZ03rJvj4Lxe/LOd3++zIIqjUeQPxim/HEScRoMxj9lgFDI+Bn80pNnIfWAUF+hwuFncz5df7r4uv702x2dKfcxFY4h57Hvx2y6Khm+56A3/fNA6wR+sY9/tL53jed5/63zaOkIn7cJ3szXN/6FznqxN2p5HranQSG1psZv+z2IDO1wuQc+hraqe7VAn7PALlwRpJqMGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">d1a899cd475426109bc0ee2f316d430c</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Handle Duplicate Security Incidents">2aaef08d47d026109bc0ee2f316d4397</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-13 16:06:59</sys_created_on>
+        <sys_id>aaa899cd475426109bc0ee2f316d43df</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 02:22:56</sys_updated_on>
+        <ui_id>fbb3bf0a-c771-4bc1-a48f-5531360e6bf6</ui_id>
+        <values>H4sIAAAAAAAA/+1VUWvbMBD+K0HPxthJE9a8lXSBQruWJRTGKOYsyYmoLHmSnDQz+e87WXYS1mxr2R73Zn2nu/u+T3e4Ibp2Ve3sUl9ZK1aKTL8+RUQoj+F3QxSUnEwJ1YoJJ7TKWiAiG5C1D8zWnD4PHsBw5QZzwSXDIBO2krB7/N0duhaSIRI6VmCwruOGTJufQoJhiSKBIr2kKR0NJ6Nhkgw/XKT5ZJSnQzYCDiMsKCHn0nfrqQ5uWyT6pQa3qzxunRFq1Z1vuyqLHtSGeVZpEhH+4rhiHPkUIC2PSAmKgdNmd0AMB3av5BFYC+WwHPGXX6z4jg2H47G/WHCUSHkIHo5Z512Ai2twgFRq6mrTXaVrLSi3wRzGC6ilm51i4cJ95aWGFAe57LO1rEv1KThCDgX6p0KktkiCV16pp97pKBZrvf3cs5wL1brSBaWmIA8ncOhdXjvPpyFc8hILZSVUFTqaVUZvRJuMXMp4JfEQF1JvsamfwBioJx6jsRDPEb9u4Ucwwqu4wzKYHGjmYAXN2mnFcmgTJ/uI2J2dSbD2KBLdzb7VnmKQ3InLgj8+hRpRuSvsvOGdjn30evhP5r5pZvjWjrMsjWlt/GjHVTvh+/3N4uPdw/LL60V4W9L7NuMSxsU4TcbnN+Nicm4zzuzEO9dh+Id18G/xxm1IkuT/Ovz1OgibhSHutLXN/+E2PPnRDz0PXlNhkdrSYzf9H8MHdjhcgp5CW22evagjtv8BnBduGnsGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=2aaef08d47d026109bc0ee2f316d4397"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=2aaef08d47d026109bc0ee2f316d4397"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_2aaef08d47d026109bc0ee2f316d4397</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-13 14:13:24</sys_created_on>
+        <sys_id>3aaef08d47d026109bc0ee2f316d43aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-13 14:13:24</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_2aaef08d47d026109bc0ee2f316d4397</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-13 14:13:24</sys_created_on>
+        <sys_id>7aaef08d47d026109bc0ee2f316d43a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-13 14:13:24</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_2aaef08d47d026109bc0ee2f316d4397"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_2aaef08d47d026109bc0ee2f316d4397"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>cd2bf80947d026109bc0ee2f316d437e</sys_id>
+        <latest_snapshot>2aaef08d47d026109bc0ee2f316d4397</latest_snapshot>
+        <compiler_build>glide-yokohama-12-18-2024__patch0-01-14-2025_01-22-2025_0439.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=cd2bf80947d026109bc0ee2f316d437e^sys_idNOT INb2aef08d47d026109bc0ee2f316d43c4"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"b2aef08d47d026109bc0ee2f316d43c4","name":"plan","plan_signature":null}}</plan>
+        <plan_id>cd2bf80947d026109bc0ee2f316d437e</plan_id>
+        <snapshot>2aaef08d47d026109bc0ee2f316d4397</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-13 14:13:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b2aef08d47d026109bc0ee2f316d43c4</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 02:22:56</sys_updated_on>
+        <trigger display_value="">3cd21509475426109bc0ee2f316d438f</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=cd2bf80947d026109bc0ee2f316d437e"/>
+</record_update>

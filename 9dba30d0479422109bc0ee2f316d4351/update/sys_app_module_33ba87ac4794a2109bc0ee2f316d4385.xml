@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Security Incident (Narek Hovhannisyan)">b046e1dc479822109bc0ee2f316d439b</application>
+        <assessment/>
+        <device_type/>
+        <filter table="x_1615099_security_incident">state!=Closed^assignment_groupDYNAMICd6435e965f510100a9ad2572f2b47744^EQ<item display_value="Closed" endquery="false" field="state" goto="false" newquery="false" operator="!=" or="false" value="Closed"/>
+            <item endquery="false" field="assignment_group" goto="false" newquery="false" operator="DYNAMIC" or="false" value="d6435e965f510100a9ad2572f2b47744"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Assigned to my group</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_1615099_security_incident</name>
+        <order>400</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <require_confirmation>true</require_confirmation>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-12 11:11:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>33ba87ac4794a2109bc0ee2f316d4385</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Assigned to my group</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Security Incident (Narek Hovhannisyan)" source="x_1615099_security">9dba30d0479422109bc0ee2f316d4351</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Security Incident (Narek Hovhannisyan)">9dba30d0479422109bc0ee2f316d4351</sys_scope>
+        <sys_update_name>sys_app_module_33ba87ac4794a2109bc0ee2f316d4385</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-12 11:11:23</sys_updated_on>
+        <timeline_page/>
+        <title>Assigned to my group</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>
